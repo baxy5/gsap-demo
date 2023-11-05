@@ -13,7 +13,15 @@
           <p class="text-xl">
             "/scroll-to-view" : appices animácio probálkozás
           </p>
-          <p class="text-xl">"/text-reveal" : lehetosegek + 1 appices animácio</p>
+          <p class="text-xl">
+            "/text-reveal" : lehetosegek + 1 appices animácio
+          </p>
+          <p class="text-xl">
+            "/appic-main" : appic főoldal animáció
+          </p>
+          <p class="text-xl">
+            "/case-study" : appic case study animáció
+          </p>
         </div>
       </div>
     </section>
@@ -125,16 +133,6 @@ export default {
       scaleX: 0,
       transformOrigin: 'left center',
       ease: 'none',
-    })
-
-    //hero
-    gsap.set('.hero', {
-      opacity: 0,
-    })
-    gsap.to('.hero', {
-      opacity: 1,
-      rotate: 360,
-      duration: 2,
     })
   },
   beforeDestroy() {
