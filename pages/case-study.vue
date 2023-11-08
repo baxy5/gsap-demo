@@ -1,6 +1,6 @@
 <template>
   <main class="bg-[#D3DEE5]">
-    <div id="container">
+    <div>
       <div class="flex justify-between items-center p-52">
         <div class="w-[500px]">
           <h1 class="text-[3.5rem] font-bold text-orange-500">Project title</h1>
@@ -20,8 +20,8 @@
           </ul>
         </div>
       </div>
-      <div>
-        <div class="pt-40 px-32 text-black flex gap-[4rem]">
+      <div id="container">
+        <div class="pt-40 px-32 text-black flex gap-[4rem] bg-[#0D283F]">
           <div class="testimage">
             <img src="../assets/ps.jpg" alt="1" />
           </div>
@@ -36,7 +36,7 @@
               or problems encountered during the process), focusing on the main
               ones, so that it is clear to everyone what we had to solve.
             </p>
-            <div class="flex gap-20">
+            <div class="relative flex gap-20">
               <div class="textbox">
                 <h1 class="text-xl text-orange-500 font-bold">Result</h1>
                 <p class="text-xl font-bold">
@@ -45,11 +45,25 @@
                   fast and easily scalable mobile application.
                 </p>
               </div>
-              <div class="box">
-                <div class="bg-white p-10 rounded-[2.5rem]">
-                  <h1>XX</h1>
-                  <p>Based on 23 000</p>
-                  <p>Appstore review</p>
+              <div class="box absolute -right-24">
+                <div class="bg-white p-10 px-16 rounded-[2.5rem]">
+                  <h1 class="text-[3.5rem] font-bold">XX</h1>
+                  <p class="text-[1.25rem]">Based on 23 000</p>
+                  <p class="text-[1.25rem]">Appstore review</p>
+                </div>
+              </div>
+              <div class="box2 absolute -right-24">
+                <div class="bg-white p-10 px-16 rounded-[2.5rem]">
+                  <h1 class="text-[3.5rem] font-bold">XX</h1>
+                  <p class="text-[1.25rem]">Based on 23 000</p>
+                  <p class="text-[1.25rem]">Appstore review</p>
+                </div>
+              </div>
+              <div class="box3 absolute -right-24">
+                <div class="bg-white p-10 px-16 rounded-[2.5rem]">
+                  <h1 class="text-[3.5rem] font-bold">XX</h1>
+                  <p class="text-[1.25rem]">Based on 23 000</p>
+                  <p class="text-[1.25rem]">Appstore review</p>
                 </div>
               </div>
             </div>
@@ -73,8 +87,8 @@ export default {
       scrollTrigger: {
         trigger: '#container',
         scrub: 1,
-        pin: '#container',
-        pinSpacer: false,
+        /* pin: '#container',
+        pinSpacer: false, */
         markers: true,
         start: 'bottom bottom',
         end: () => innerHeight * 10,
@@ -102,6 +116,16 @@ export default {
         x: -600,
         y: 200,
       })
+      .set('.box2', {
+        opacity: 0,
+        x: -600,
+        y: 200,
+      })
+      .set('.box3', {
+        opacity: 0,
+        x: -600,
+        y: 200,
+      })
       .to('.parag', {
         y: -100,
         opacity: 4,
@@ -121,18 +145,36 @@ export default {
         clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
         x: 300,
         ease: 'expo.out',
-        duration: 5,
+        duration: 0.3,
       })
       .to('.testimage', {
         opacity: 0,
-        duration: 4,
+        duration: 0.3,
       })
       .to('.textbox', {
         y: -400,
         opacity: 4,
       })
       .to('.box', {
-        y: -400,
+        y: -300,
+        opacity: 4,
+      })
+      .to('.box', {
+        scale: 0.7,
+        opacity: 0.3,
+        duration: 0.1,
+      })
+      .to('.box2', {
+        y: -250,
+        opacity: 4,
+      })
+      .to('.box2', {
+        scale: 0.8,
+        opacity: 0.5,
+        duration: 0.1,
+      })
+      .to('.box3', {
+        y: -200,
         opacity: 4,
       })
 
