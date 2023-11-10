@@ -22,6 +22,9 @@
           <p class="text-xl">
             "/case-study" : appic case study animáció
           </p>
+          <p class="text-xl">
+            "/case" : appic case study animáció 2.0
+          </p>
         </div>
       </div>
     </section>
