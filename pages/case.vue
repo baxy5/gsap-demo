@@ -76,7 +76,9 @@
             so that it is clear to everyone what we had to solve.
           </p>
         </div>
-        <div class="desc2 absolute top-[39rem] pt-16 px-[1.5rem] md:top-[52rem]">
+        <div
+          class="desc2 absolute top-[39rem] pt-16 px-[1.5rem] md:top-[52rem]"
+        >
           <h2 class="text-[#FF4A31] text-[1rem] font-[800] uppercase">
             our process
           </h2>
@@ -87,7 +89,9 @@
             <li>Deliver</li>
           </ul>
         </div>
-        <div class="desc3 absolute top-[57rem] pt-16 px-[1.5rem] md:top-[72rem]">
+        <div
+          class="desc3 absolute top-[57rem] pt-16 px-[1.5rem] md:top-[72rem]"
+        >
           <h2 class="text-[#FF4A31] text-[1rem] font-[800] uppercase">
             result
           </h2>
@@ -145,6 +149,7 @@ export default {
         trigger: '.container',
         pin: '.container',
         pinSpacer: false,
+        //pinSpacing: false,
         markers: true,
         scrub: 1,
       },
