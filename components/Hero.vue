@@ -34,7 +34,7 @@ export default {
         trigger: '.hero',
         pin: '.hero-container', // akkor Pinel amikor a "scroller-start" eléri a "start" vonalat, magyarán amikor elindul az animáció
         pinSpacing: false, // automatikusan rak annyi spacinget mind az "end" ebben az esetbel 1500px, ezzel kikapcsoljuk és nem lesz
-        scrub: 2,
+        scrub: true,
         start: 'top 50px',
         end: '+=1500',
       },
@@ -42,7 +42,7 @@ export default {
 
     tl.set('.hero', { opacity: 0 })
     tl.to('.hero', {
-      opacity: 1,
+      opacity: 2,
     })
     tl.to('.hero', { opacity: 0 })
   },

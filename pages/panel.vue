@@ -1,13 +1,13 @@
 <template>
   <main>
-    <div class="panel1 h-[300px] bg-red-500">
+    <div class="panel1 h-[100vh] bg-red-500">
       <div class="text">
         <h1>asd</h1>
         <p>asdasdsad</p>
       </div>
     </div>
-    <div class="panel2 h-[500px] bg-orange-500"><p>asd</p></div>
-    <div class="panel3 h-[450px] bg-green-500"><p>asd</p></div>
+    <div class="panel2 h-[700px] bg-orange-500"><p>asd</p></div>
+    <div class="panel3 h-[850px] bg-green-500"><p>asd</p></div>
   </main>
 </template>
 <script>
@@ -20,10 +20,11 @@ if (typeof window !== 'undefined') {
 export default {
   mounted() {
     ScrollTrigger.create({
-      trigger: '.panel1',
+      trigger: '.panel2',
       start: 'top top',
-      pin: '.text',
+      pin: '.panel2',
       pinSpacing: false,
+      markers: true,
     })
   },
 }

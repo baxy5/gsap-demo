@@ -39,10 +39,10 @@ export default {
       scrollTrigger: {
         trigger: '.' + this.container,
         start: 'top',
-        /* end: () => innerHeight * 5, */
         end: 'bottom',
         scrub: 2,
         pin: '.' + this.container,
+        pinSpacing: false,
       },
     })
 
@@ -50,16 +50,16 @@ export default {
       .from('.' + this.child, {
         scale: 3,
         opacity: 0,
-        duration: 0.1,
+        duration: 1,
       })
       .to('.' + this.child, {
         scale: 1,
-        duration: 0.1,
+        duration: 0.5,
       })
       .to('.' + this.child, {
         scale: 0,
         opacity: 0,
-        duration: 0.1,
+        duration: 1,
       })
   },
 }
