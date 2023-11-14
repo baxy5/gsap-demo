@@ -64,34 +64,34 @@
           </ul>
         </div>
       </section>
-      <section
-        class="section1 container h-[100vh] relative text-[#0D283F] bg-[#D3DEE5]"
-      >
-        <img class="img md:px-[4rem]" src="../assets/ps.jpg" alt="" />
-        <div class="desc1 px-[1.5rem] pt-16">
-          <h2 class="text-[#FF4A31] text-[1rem] font-[800] uppercase">
-            key challenge to solve
-          </h2>
-          <p class="text-[1.375rem] font-[800] pt-4">
-            To highlight the main challenges of the project (initial problems or
-            problems encountered during the process), focusing on the main ones,
-            so that it is clear to everyone what we had to solve.
-          </p>
-        </div>  
-        <div class="desc2 px-[1.5rem]">
-          <h2 class="text-[#FF4A31] text-[1rem] font-[800] uppercase">
-            our process
-          </h2>
-          <ul class="text-[1.375rem] font-[800] pt-4 grid gap-4">
-            <li>Discover</li>
-            <li>Market research</li>
-            <li>Business development</li>
-            <li>Deliver</li>
-          </ul>
+      <section class="section1 h-[100vh] relative text-[#0D283F] bg-[#D3DEE5]">
+        <div class="container">
+          <img class="img md:px-[4rem]" src="../assets/ps.jpg" alt="" />
+          <div class="desc1 px-[1.5rem] pt-8">
+            <h2 class="text-[#FF4A31] text-[1rem] font-[800] uppercase">
+              key challenge to solve
+            </h2>
+            <p class="text-[1.375rem] font-[800] pt-4">
+              To highlight the main challenges of the project (initial problems
+              or problems encountered during the process), focusing on the main
+              ones, so that it is clear to everyone what we had to solve.
+            </p>
+          </div>
+          <div class="desc2 px-[1.5rem]">
+            <h2 class="text-[#FF4A31] text-[1rem] font-[800] uppercase">
+              our process
+            </h2>
+            <ul class="text-[1.375rem] font-[800] pt-4 grid gap-4">
+              <li>Discover</li>
+              <li>Market research</li>
+              <li>Business development</li>
+              <li>Deliver</li>
+            </ul>
+          </div>
         </div>
       </section>
-      <section>
-        <div class="desc3 px-[1.5rem]">
+      <section class="section2 text-[#0D283F] bg-[#D3DEE5] px-[1.5rem]">
+        <div class="desc3">
           <h2 class="text-[#FF4A31] text-[1rem] font-[800] uppercase">
             result
           </h2>
@@ -100,34 +100,18 @@
             delivery and decreases time to market, resulting in a fast and
             easily scalable mobile application.
           </p>
+        </div>
+        <div class="flex justify-center items-center text-center pt-16">
           <div
-            class="relative flex justify-center items-center text-center pt-16"
+            class="box1 text-[#001826] p-[3rem] bg-white rounded-[2rem] w-[19rem] flex items-center justify-center flex-col"
           >
-            <div
-              class="box1 absolute top-6 text-[#001826] p-[3rem] bg-white rounded-[2rem] w-[19rem] flex items-center justify-center flex-col"
-            >
-              <p class="text-[3.5rem] font-[500] pb-[1.5rem]">4,4</p>
-              <p class="text-[1.125rem] font-[600]">Based on 23 000</p>
-              <p class="text-[1.125rem] font-[600]">Appstore review</p>
-            </div>
-            <div
-              class="box2 absolute top-10 text-[#001826] p-[3rem] bg-white rounded-[2rem] w-[19rem] flex items-center justify-center flex-col"
-            >
-              <p class="text-[3.5rem] font-[500] pb-[1.5rem]">4,4</p>
-              <p class="text-[1.125rem] font-[600]">Based on 23 000</p>
-              <p class="text-[1.125rem] font-[600]">Appstore review</p>
-            </div>
-            <div
-              class="box3 absolute top-14 text-[#001826] p-[3rem] bg-white rounded-[2rem] w-[19rem] flex items-center justify-center flex-col"
-            >
-              <p class="text-[3.5rem] font-[500] pb-[1.5rem]">4,4</p>
-              <p class="text-[1.125rem] font-[600]">Based on 23 000</p>
-              <p class="text-[1.125rem] font-[600]">Appstore review</p>
-            </div>
+            <p class="text-[3.5rem] font-[500] pb-[1.5rem]">4,4</p>
+            <p class="text-[1.125rem] font-[600]">Based on 23 000</p>
+            <p class="text-[1.125rem] font-[600]">Appstore review</p>
           </div>
         </div>
       </section>
-      <section>
+      <section class="h-[100vh]">
         <p>
           “It was fun to break from our routine of building MVPs with
           early-stage startups to blend into a team of executives. Spoiler: we
@@ -139,6 +123,7 @@
 </template>
 <script>
 import gsap from 'gsap'
+import _ScrollTrigger from 'gsap/ScrollTrigger'
 import { ScrollTrigger } from 'gsap/all'
 
 if (typeof window !== 'undefined') {
@@ -148,15 +133,15 @@ export default {
   mounted() {
     let tl = gsap.timeline({
       scrollTrigger: {
-        trigger: '.container',
-        pin: '.container',
+        trigger: '.section1',
+        pin: '.section1',
         pinSpacer: false,
         //pinSpacing: false,
         markers: true,
         scrub: 1,
       },
     })
-    tl.set(['.desc1', '.desc2' /* '.desc3' */, , '.box1', '.box2', '.box3'], {
+    tl.set(['.desc1', '.desc2'], {
       opacity: 0,
       y: 150,
     })
@@ -173,54 +158,25 @@ export default {
       })
       .to('.desc2', {
         opacity: 4,
-        y: -200,
+        y: -250,
       })
       .to('.desc2', {
         opacity: 0,
       })
-      /* .to('.desc3', {
-        opacity: 4,
-        y: -500,
-      }) */
-      .to('.img', {
-        y: -200,
+      .to('.container', {
         opacity: 0,
       })
-    /* .to(
-        '.desc3',
-        {
-          y: -800,
-        },
-        '<'
-      ) */
-    /*  .to('.box1', {
-        y: 0,
-        opacity: 4,
-      })
-      .to('.box1', {
-        scale: 0.6,
-        opacity: 0.6,
-      })
-      .to(
-        '.box2',
-        {
-          y: 25,
-          opacity: 4,
-        },
-        '<'
-      )
-      .to('.box2', {
-        scale: 0.8,
-        opacity: 0.8,
-      })
-      .to(
-        '.box3',
-        {
-          y: 50,
-          opacity: 4,
-        },
-        '<'
-      ) */
+
+    let tl2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.section2',
+        pin: '.section2',
+        pinSpacer: false,
+        //pinSpacing: false,
+        markers: true,
+        scrub: 1,
+      },
+    })
   },
 }
 </script>
