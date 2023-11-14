@@ -25,6 +25,9 @@
           <p class="text-xl">
             "/case" : appic case study animáció 2.0
           </p>
+          <p class="text-xl">
+            "/panel" : sajat animacio - itt tudom breakpointra felosztani mikor milyen legyen az animacio
+          </p>
         </div>
       </div>
     </section>
