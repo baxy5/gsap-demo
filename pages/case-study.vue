@@ -21,7 +21,7 @@
         </div>
       </div>
       <div id="container">
-        <div class="pt-40 px-32 text-black flex gap-[4rem] bg-[#0D283F]">
+        <div class="pt-40 px-32 text-black flex gap-[4rem]">
           <div class="testimage">
             <img src="../assets/ps.jpg" alt="1" />
           </div>
@@ -87,8 +87,8 @@ export default {
       scrollTrigger: {
         trigger: '#container',
         scrub: 1,
-        /* pin: '#container',
-        pinSpacer: false, */
+        pin: '#container',
+        pinSpacer: false,
         markers: true,
         start: 'bottom bottom',
         end: () => innerHeight * 10,

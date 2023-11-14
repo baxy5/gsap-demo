@@ -68,7 +68,7 @@
         class="section1 container h-[100vh] relative text-[#0D283F] bg-[#D3DEE5]"
       >
         <img class="img md:px-[4rem]" src="../assets/ps.jpg" alt="" />
-        <div class="desc1 absolute top-80 px-[1.5rem] md:top-[34rem]">
+        <div class="desc1 px-[1.5rem] pt-16">
           <h2 class="text-[#FF4A31] text-[1rem] font-[800] uppercase">
             key challenge to solve
           </h2>
@@ -77,8 +77,8 @@
             problems encountered during the process), focusing on the main ones,
             so that it is clear to everyone what we had to solve.
           </p>
-        </div>
-        <div class="desc2 absolute top-[39rem] px-[1.5rem] md:top-[52rem]">
+        </div>  
+        <div class="desc2 px-[1.5rem]">
           <h2 class="text-[#FF4A31] text-[1rem] font-[800] uppercase">
             our process
           </h2>
@@ -89,41 +89,6 @@
             <li>Deliver</li>
           </ul>
         </div>
-        <!-- <div class="desc3 absolute top-[57rem] px-[1.5rem] md:top-[72rem]">
-          <h2 class="text-[#FF4A31] text-[1rem] font-[800] uppercase">
-            result
-          </h2>
-          <p class="text-[1.375rem] font-[800] pt-4">
-            We have developed a mobile competence center that supports agile
-            delivery and decreases time to market, resulting in a fast and
-            easily scalable mobile application.
-          </p>
-          <div
-            class="relative flex justify-center items-center text-center pt-16"
-          >
-            <div
-              class="box1 absolute top-6 text-[#001826] p-[3rem] bg-white rounded-[2rem] w-[19rem] flex items-center justify-center flex-col"
-            >
-              <p class="text-[3.5rem] font-[500] pb-[1.5rem]">4,4</p>
-              <p class="text-[1.125rem] font-[600]">Based on 23 000</p>
-              <p class="text-[1.125rem] font-[600]">Appstore review</p>
-            </div>
-            <div
-              class="box2 absolute top-10 text-[#001826] p-[3rem] bg-white rounded-[2rem] w-[19rem] flex items-center justify-center flex-col"
-            >
-              <p class="text-[3.5rem] font-[500] pb-[1.5rem]">4,4</p>
-              <p class="text-[1.125rem] font-[600]">Based on 23 000</p>
-              <p class="text-[1.125rem] font-[600]">Appstore review</p>
-            </div>
-            <div
-              class="box3 absolute top-14 text-[#001826] p-[3rem] bg-white rounded-[2rem] w-[19rem] flex items-center justify-center flex-col"
-            >
-              <p class="text-[3.5rem] font-[500] pb-[1.5rem]">4,4</p>
-              <p class="text-[1.125rem] font-[600]">Based on 23 000</p>
-              <p class="text-[1.125rem] font-[600]">Appstore review</p>
-            </div>
-          </div>
-        </div> -->
       </section>
       <section>
         <div class="desc3 px-[1.5rem]">
@@ -191,7 +156,7 @@ export default {
         scrub: 1,
       },
     })
-    tl.set(['.desc1', '.desc2', /* '.desc3' */, '.box1', '.box2', '.box3'], {
+    tl.set(['.desc1', '.desc2' /* '.desc3' */, , '.box1', '.box2', '.box3'], {
       opacity: 0,
       y: 150,
     })
@@ -208,7 +173,7 @@ export default {
       })
       .to('.desc2', {
         opacity: 4,
-        y: -300,
+        y: -200,
       })
       .to('.desc2', {
         opacity: 0,
