@@ -10,6 +10,12 @@
       >
         We love to wow
       </p>
+      <p
+        id="text2"
+        class="absolute top-[40%] left-[20%] text-white text-[4rem] z-50"
+      >
+        We love to wow2
+      </p>
       <p class="text-black text-[6rem] appic z-50 mt-96">Appic</p>
       <svg
         class="svg absolute top-0 h-full w-full z-40"
@@ -53,16 +59,44 @@ export default {
         scrub: 1,
         pin: '#container',
         start: 'center center',
+        markers: true,
       },
     })
 
-    tl.set(['.appic', '#text1', '.svg'], {
+    tl.set(['#text1', '#text2'], {
       opacity: 0,
-      display: 'hidden',
+      y: 120,
     })
-      .from('.svg', {
+      .set('.appic', {
+        opacity: 0,
+        display: 'hidden',
+      })
+      .set('.svg', {
         scale: 8,
+        display: 'hidden',
+      })
+      .to('.svg', {
         display: 'block',
+        scale: 2.5,
+      })
+      .to('#text1', {
+        opacity: 4,
+        y: 0,
+      })
+      .to('#text1', {
+        opacity: 0,
+        y: -120,
+      })
+      .to('.svg', {
+        scale: 1.5,
+      })
+      .to('#text2', {
+        opacity: 4,
+        y: 0,
+      })
+      .to('#text2', {
+        opacity: 0,
+        y: -120,
       })
       .to('.svg', {
         scale: 0.3,

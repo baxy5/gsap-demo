@@ -1,6 +1,6 @@
 <template>
   <main class="overflow-hidden bg-[#001323]">
-    <section
+    <!-- <section
       class="appic-logo-container h-[100vh] bg-[#001323] flex justify-center items-center"
     >
       <img
@@ -14,7 +14,7 @@
     <Container container="scale-container" child="scale" />
     <Container container="scale-container2" child="scale2" />
     <Container container="scale-container3" child="scale3" />
-    <Hero />
+    <Hero /> -->
     <Wow />
     <div class="h-[100vh]"></div>
     <div class="h-[100vh]"></div>
