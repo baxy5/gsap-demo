@@ -13,8 +13,8 @@
     </section>
     <Container container="scale-container" child="scale" />
     <Container container="scale-container2" child="scale2" />
-    <Container container="scale-container3" child="scale3" />
-    <Hero /> -->
+    <Container container="scale-container3" child="scale3" /> -->
+    <Hero />
     <Wow />
     <div class="h-[100vh]"></div>
     <div class="h-[100vh]"></div>

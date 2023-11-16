@@ -31,20 +31,21 @@ export default {
   mounted() {
     let tl = gsap.timeline({
       scrollTrigger: {
-        trigger: '.hero',
+        trigger: '.hero-container',
         pin: '.hero-container', // akkor Pinel amikor a "scroller-start" eléri a "start" vonalat, magyarán amikor elindul az animáció
         pinSpacing: false, // automatikusan rak annyi spacinget mind az "end" ebben az esetbel 1500px, ezzel kikapcsoljuk és nem lesz
         scrub: true,
-        start: 'top 50px',
-        end: '+=1500',
+        start: 'top top',
+        end: 'bottom top',
+        markers: true,
       },
     })
 
     tl.set('.hero', { opacity: 0 })
-    tl.to('.hero', {
-      opacity: 2,
-    })
-    tl.to('.hero', { opacity: 0 })
+      .to('.hero', {
+        opacity: 2,
+      })
+      .to('.hero', { opacity: 0 })
   },
 }
 </script>

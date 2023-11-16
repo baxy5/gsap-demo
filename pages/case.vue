@@ -1,73 +1,74 @@
 <template>
   <main>
-    <section class="">
-      <section class="hero bg-[#D3DEE5] px-[1.5rem] pb-8">
-        <h1 class="text-[2.5rem] text-[#FF4A31] font-[800]">Project title</h1>
-        <p class="text-[1.375rem] text-[#0D283F] font-[800]">
-          Short text about the project. What it is, what impact it has had. Who
-          we worked with, maybe a few words about the partner. In 3-5 lines.
-          Highlight the main point & make it interesting.
-        </p>
-        <div class="text-[#0D283F] mt-8">
-          <p class="text-[1rem] uppercase font-[800] mb-4">Services</p>
-          <ul class="flex gap-[0.5rem]">
-            <li
-              class="bg-white text-[0.75rem] font-[600] rounded-[6.25rem] flex items-center justify-center py-[0.25rem] px-[0.63rem]"
-            >
-              Product Design
-            </li>
-            <li
-              class="bg-white text-[0.75rem] font-[600] rounded-[6.25rem] flex items-center justify-center py-[0.25rem] px-[0.63rem]"
-            >
-              Design System
-            </li>
-            <li
-              class="bg-white text-[0.75rem] font-[600] rounded-[6.25rem] flex items-center justify-center py-[0.25rem] px-[0.63rem]"
-            >
-              Webdesign
-            </li>
-            <li
-              class="bg-white text-[0.75rem] font-[600] rounded-[6.25rem] flex items-center justify-center py-[0.25rem] px-[0.63rem]"
-            >
-              App Design
-            </li>
-          </ul>
-        </div>
-        <div class="text-[#0D283F] mt-8">
-          <p class="text-[1rem] uppercase font-[800] mb-4">Industries</p>
-          <ul class="flex gap-[0.5rem]">
-            <li
-              class="bg-white text-[0.75rem] font-[600] rounded-[6.25rem] flex items-center justify-center py-[0.25rem] px-[0.63rem]"
-            >
-              Pharmacy
-            </li>
-            <li
-              class="bg-white text-[0.75rem] font-[600] rounded-[6.25rem] flex items-center justify-center py-[0.25rem] px-[0.63rem]"
-            >
-              Retail
-            </li>
-          </ul>
-        </div>
-        <div class="text-[#0D283F] mt-8">
-          <p class="text-[1rem] uppercase font-[800] mb-4">Technologies</p>
-          <ul class="flex gap-[0.5rem]">
-            <li
-              class="bg-white text-[0.75rem] font-[600] rounded-[6.25rem] flex items-center justify-center py-[0.25rem] px-[0.63rem]"
-            >
-              Angular
-            </li>
-            <li
-              class="bg-white text-[0.75rem] font-[600] rounded-[6.25rem] flex items-center justify-center py-[0.25rem] px-[0.63rem]"
-            >
-              Node
-            </li>
-          </ul>
-        </div>
-      </section>
-      <section class="section1 h-[100vh] relative text-[#0D283F] bg-[#D3DEE5]">
-        <div class="container">
-          <img class="img md:px-[4rem]" src="../assets/ps.jpg" alt="" />
-          <div class="desc1 px-[1.5rem] pt-8">
+    <section class="hero h-full w-full bg-[#D3DEE5] px-[1.5rem] pb-8">
+      <h1 class="text-[2.5rem] text-[#FF4A31] font-[800]">Project title</h1>
+      <p class="text-[1.375rem] text-[#0D283F] font-[800]">
+        Short text about the project. What it is, what impact it has had. Who we
+        worked with, maybe a few words about the partner. In 3-5 lines.
+        Highlight the main point & make it interesting.
+      </p>
+      <div class="text-[#0D283F] mt-8">
+        <p class="text-[1rem] uppercase font-[800] mb-4">Services</p>
+        <ul class="flex gap-[0.5rem]">
+          <li
+            class="bg-white text-[0.75rem] font-[600] rounded-[6.25rem] flex items-center justify-center py-[0.25rem] px-[0.63rem]"
+          >
+            Product Design
+          </li>
+          <li
+            class="bg-white text-[0.75rem] font-[600] rounded-[6.25rem] flex items-center justify-center py-[0.25rem] px-[0.63rem]"
+          >
+            Design System
+          </li>
+          <li
+            class="bg-white text-[0.75rem] font-[600] rounded-[6.25rem] flex items-center justify-center py-[0.25rem] px-[0.63rem]"
+          >
+            Webdesign
+          </li>
+          <li
+            class="bg-white text-[0.75rem] font-[600] rounded-[6.25rem] flex items-center justify-center py-[0.25rem] px-[0.63rem]"
+          >
+            App Design
+          </li>
+        </ul>
+      </div>
+      <div class="text-[#0D283F] mt-8">
+        <p class="text-[1rem] uppercase font-[800] mb-4">Industries</p>
+        <ul class="flex gap-[0.5rem]">
+          <li
+            class="bg-white text-[0.75rem] font-[600] rounded-[6.25rem] flex items-center justify-center py-[0.25rem] px-[0.63rem]"
+          >
+            Pharmacy
+          </li>
+          <li
+            class="bg-white text-[0.75rem] font-[600] rounded-[6.25rem] flex items-center justify-center py-[0.25rem] px-[0.63rem]"
+          >
+            Retail
+          </li>
+        </ul>
+      </div>
+      <div class="text-[#0D283F] mt-8">
+        <p class="text-[1rem] uppercase font-[800] mb-4">Technologies</p>
+        <ul class="flex gap-[0.5rem]">
+          <li
+            class="bg-white text-[0.75rem] font-[600] rounded-[6.25rem] flex items-center justify-center py-[0.25rem] px-[0.63rem]"
+          >
+            Angular
+          </li>
+          <li
+            class="bg-white text-[0.75rem] font-[600] rounded-[6.25rem] flex items-center justify-center py-[0.25rem] px-[0.63rem]"
+          >
+            Node
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section1 h-[100vh] text-[#0D283F] bg-[#D3DEE5]">
+      <img class="img md:px-[4rem]" src="../assets/ps.jpg" alt="" />
+      <div class="desc-container relative">
+        <div class="absolute px-[1.5rem] pt-8">
+          <div class="desc1">
             <h2 class="text-[#FF4A31] text-[1rem] font-[800] uppercase">
               key challenge to solve
             </h2>
@@ -77,7 +78,9 @@
               ones, so that it is clear to everyone what we had to solve.
             </p>
           </div>
-          <div class="desc2 px-[1.5rem]">
+        </div>
+        <div class="absolute w-full px-[1.5rem] pt-8">
+          <div class="desc2">
             <h2 class="text-[#FF4A31] text-[1rem] font-[800] uppercase">
               our process
             </h2>
@@ -89,35 +92,34 @@
             </ul>
           </div>
         </div>
-      </section>
-      <section class="section2 text-[#0D283F] bg-[#D3DEE5] px-[1.5rem]">
-        <div class="desc3">
-          <h2 class="text-[#FF4A31] text-[1rem] font-[800] uppercase">
-            result
-          </h2>
-          <p class="text-[1.375rem] font-[800] pt-4">
-            We have developed a mobile competence center that supports agile
-            delivery and decreases time to market, resulting in a fast and
-            easily scalable mobile application.
-          </p>
-        </div>
-        <div class="flex justify-center items-center text-center pt-16">
-          <div
-            class="box1 text-[#001826] p-[3rem] bg-white rounded-[2rem] w-[19rem] flex items-center justify-center flex-col"
-          >
-            <p class="text-[3.5rem] font-[500] pb-[1.5rem]">4,4</p>
-            <p class="text-[1.125rem] font-[600]">Based on 23 000</p>
-            <p class="text-[1.125rem] font-[600]">Appstore review</p>
-          </div>
-        </div>
-      </section>
-      <section class="h-[100vh]">
-        <p>
-          “It was fun to break from our routine of building MVPs with
-          early-stage startups to blend into a team of executives. Spoiler: we
-          did just as good.”
+      </div>
+    </section>
+
+    <section class="section2 text-[#0D283F] bg-[#D3DEE5] px-[1.5rem]">
+      <div class="desc3">
+        <h2 class="text-[#FF4A31] text-[1rem] font-[800] uppercase">result</h2>
+        <p class="text-[1.375rem] font-[800] pt-4">
+          We have developed a mobile competence center that supports agile
+          delivery and decreases time to market, resulting in a fast and easily
+          scalable mobile application.
         </p>
-      </section>
+      </div>
+      <div class="flex justify-center items-center text-center pt-16">
+        <div
+          class="box1 text-[#001826] p-[3rem] bg-white rounded-[2rem] w-[19rem] flex items-center justify-center flex-col"
+        >
+          <p class="text-[3.5rem] font-[500] pb-[1.5rem]">4,4</p>
+          <p class="text-[1.125rem] font-[600]">Based on 23 000</p>
+          <p class="text-[1.125rem] font-[600]">Appstore review</p>
+        </div>
+      </div>
+    </section>
+    <section class="h-[100vh]">
+      <p>
+        “It was fun to break from our routine of building MVPs with early-stage
+        startups to blend into a team of executives. Spoiler: we did just as
+        good.”
+      </p>
     </section>
   </main>
 </template>
@@ -136,47 +138,39 @@ export default {
         trigger: '.section1',
         pin: '.section1',
         pinSpacer: false,
-        //pinSpacing: false,
-        markers: true,
         scrub: 1,
+        markers: true,
       },
     })
+
     tl.set(['.desc1', '.desc2'], {
       opacity: 0,
-      y: 150,
+      y: 120,
     })
-      .to(
-        '.desc1',
-        {
-          opacity: 4,
-          y: 0,
-        },
-        '<'
-      )
+      .to('.desc1', {
+        opacity: 4,
+        y: 0,
+      })
       .to('.desc1', {
         opacity: 0,
+        y: -25,
       })
       .to('.desc2', {
         opacity: 4,
-        y: -250,
+        y: 0,
       })
       .to('.desc2', {
         opacity: 0,
+        y: -25,
       })
-      .to('.container', {
-        opacity: 0,
-      })
-
-    let tl2 = gsap.timeline({
-      scrollTrigger: {
-        trigger: '.section2',
-        pin: '.section2',
-        pinSpacer: false,
-        //pinSpacing: false,
-        markers: true,
-        scrub: 1,
-      },
-    })
+      .to(
+        '.img',
+        {
+          opacity: 0,
+          y: -25,
+        },
+        '<'
+      )
   },
 }
 </script>

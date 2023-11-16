@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="overflow-hidden">
     <div
       id="container"
       class="relative bg-white h-[100vh] w-full flex justify-center items-center"
@@ -16,9 +16,9 @@
       >
         We love to wow2
       </p>
-      <p class="text-black text-[6rem] appic z-50 mt-96">Appic</p>
+      <p class="absolute text-black text-[6rem] appic z-50 mt-96">Appic</p>
       <svg
-        class="svg absolute top-0 h-full w-full z-40"
+        class="svg h-full w-full z-40"
         width="1794"
         height="1219"
         viewBox="0 0 1794 1219"
@@ -59,7 +59,6 @@ export default {
         scrub: 1,
         pin: '#container',
         start: 'center center',
-        markers: true,
       },
     })
 
