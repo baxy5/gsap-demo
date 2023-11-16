@@ -1,66 +1,68 @@
 <template>
   <main>
     <section class="hero h-full w-full bg-[#D3DEE5] px-[1.5rem] pb-8">
-      <h1 class="text-[2.5rem] text-[#FF4A31] font-[800]">Project title</h1>
-      <p class="text-[1.375rem] text-[#0D283F] font-[800]">
-        Short text about the project. What it is, what impact it has had. Who we
-        worked with, maybe a few words about the partner. In 3-5 lines.
-        Highlight the main point & make it interesting.
-      </p>
-      <div class="text-[#0D283F] mt-8">
-        <p class="text-[1rem] uppercase font-[800] mb-4">Services</p>
-        <ul class="flex gap-[0.5rem]">
-          <li
-            class="bg-white text-[0.75rem] font-[600] rounded-[6.25rem] flex items-center justify-center py-[0.25rem] px-[0.63rem]"
-          >
-            Product Design
-          </li>
-          <li
-            class="bg-white text-[0.75rem] font-[600] rounded-[6.25rem] flex items-center justify-center py-[0.25rem] px-[0.63rem]"
-          >
-            Design System
-          </li>
-          <li
-            class="bg-white text-[0.75rem] font-[600] rounded-[6.25rem] flex items-center justify-center py-[0.25rem] px-[0.63rem]"
-          >
-            Webdesign
-          </li>
-          <li
-            class="bg-white text-[0.75rem] font-[600] rounded-[6.25rem] flex items-center justify-center py-[0.25rem] px-[0.63rem]"
-          >
-            App Design
-          </li>
-        </ul>
-      </div>
-      <div class="text-[#0D283F] mt-8">
-        <p class="text-[1rem] uppercase font-[800] mb-4">Industries</p>
-        <ul class="flex gap-[0.5rem]">
-          <li
-            class="bg-white text-[0.75rem] font-[600] rounded-[6.25rem] flex items-center justify-center py-[0.25rem] px-[0.63rem]"
-          >
-            Pharmacy
-          </li>
-          <li
-            class="bg-white text-[0.75rem] font-[600] rounded-[6.25rem] flex items-center justify-center py-[0.25rem] px-[0.63rem]"
-          >
-            Retail
-          </li>
-        </ul>
-      </div>
-      <div class="text-[#0D283F] mt-8">
-        <p class="text-[1rem] uppercase font-[800] mb-4">Technologies</p>
-        <ul class="flex gap-[0.5rem]">
-          <li
-            class="bg-white text-[0.75rem] font-[600] rounded-[6.25rem] flex items-center justify-center py-[0.25rem] px-[0.63rem]"
-          >
-            Angular
-          </li>
-          <li
-            class="bg-white text-[0.75rem] font-[600] rounded-[6.25rem] flex items-center justify-center py-[0.25rem] px-[0.63rem]"
-          >
-            Node
-          </li>
-        </ul>
+      <div class="hero-content">
+        <h1 class="text-[2.5rem] text-[#FF4A31] font-[800]">Project title</h1>
+        <p class="text-[1.375rem] text-[#0D283F] font-[800]">
+          Short text about the project. What it is, what impact it has had. Who
+          we worked with, maybe a few words about the partner. In 3-5 lines.
+          Highlight the main point & make it interesting.
+        </p>
+        <div class="text-[#0D283F] mt-8">
+          <p class="text-[1rem] uppercase font-[800] mb-4">Services</p>
+          <ul class="flex gap-[0.5rem]">
+            <li
+              class="bg-white text-[0.75rem] font-[600] rounded-[6.25rem] flex items-center justify-center py-[0.25rem] px-[0.63rem]"
+            >
+              Product Design
+            </li>
+            <li
+              class="bg-white text-[0.75rem] font-[600] rounded-[6.25rem] flex items-center justify-center py-[0.25rem] px-[0.63rem]"
+            >
+              Design System
+            </li>
+            <li
+              class="bg-white text-[0.75rem] font-[600] rounded-[6.25rem] flex items-center justify-center py-[0.25rem] px-[0.63rem]"
+            >
+              Webdesign
+            </li>
+            <li
+              class="bg-white text-[0.75rem] font-[600] rounded-[6.25rem] flex items-center justify-center py-[0.25rem] px-[0.63rem]"
+            >
+              App Design
+            </li>
+          </ul>
+        </div>
+        <div class="text-[#0D283F] mt-8">
+          <p class="text-[1rem] uppercase font-[800] mb-4">Industries</p>
+          <ul class="flex gap-[0.5rem]">
+            <li
+              class="bg-white text-[0.75rem] font-[600] rounded-[6.25rem] flex items-center justify-center py-[0.25rem] px-[0.63rem]"
+            >
+              Pharmacy
+            </li>
+            <li
+              class="bg-white text-[0.75rem] font-[600] rounded-[6.25rem] flex items-center justify-center py-[0.25rem] px-[0.63rem]"
+            >
+              Retail
+            </li>
+          </ul>
+        </div>
+        <div class="text-[#0D283F] mt-8">
+          <p class="text-[1rem] uppercase font-[800] mb-4">Technologies</p>
+          <ul class="flex gap-[0.5rem]">
+            <li
+              class="bg-white text-[0.75rem] font-[600] rounded-[6.25rem] flex items-center justify-center py-[0.25rem] px-[0.63rem]"
+            >
+              Angular
+            </li>
+            <li
+              class="bg-white text-[0.75rem] font-[600] rounded-[6.25rem] flex items-center justify-center py-[0.25rem] px-[0.63rem]"
+            >
+              Node
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -95,32 +97,37 @@
       </div>
     </section>
 
-    <section class="section2 text-[#0D283F] bg-[#D3DEE5] px-[1.5rem]">
-      <div class="desc3">
-        <h2 class="text-[#FF4A31] text-[1rem] font-[800] uppercase">result</h2>
-        <p class="text-[1.375rem] font-[800] pt-4">
-          We have developed a mobile competence center that supports agile
-          delivery and decreases time to market, resulting in a fast and easily
-          scalable mobile application.
-        </p>
-      </div>
-      <div class="flex justify-center items-center text-center pt-16">
-        <div
-          class="box1 text-[#001826] p-[3rem] bg-white rounded-[2rem] w-[19rem] flex items-center justify-center flex-col"
-        >
-          <p class="text-[3.5rem] font-[500] pb-[1.5rem]">4,4</p>
-          <p class="text-[1.125rem] font-[600]">Based on 23 000</p>
-          <p class="text-[1.125rem] font-[600]">Appstore review</p>
+    <!-- <section class="section2 text-[#0D283F] bg-[#D3DEE5] px-[1.5rem]">
+      <div class="relative">
+        <div class="desc3">
+          <h2 class="text-[#FF4A31] text-[1rem] font-[800] uppercase">
+            result
+          </h2>
+          <p class="text-[1.375rem] font-[800] pt-4">
+            We have developed a mobile competence center that supports agile
+            delivery and decreases time to market, resulting in a fast and
+            easily scalable mobile application.
+          </p>
+        </div>
+        <div class="flex justify-center items-center text-center pt-16">
+          <div
+            class="box1 text-[#001826] p-[3rem] bg-white rounded-[2rem] w-[19rem] flex items-center justify-center flex-col"
+          >
+            <p class="text-[3.5rem] font-[500] pb-[1.5rem]">4,4</p>
+            <p class="text-[1.125rem] font-[600]">Based on 23 000</p>
+            <p class="text-[1.125rem] font-[600]">Appstore review</p>
+          </div>
         </div>
       </div>
-    </section>
-    <section class="h-[100vh]">
+    </section> -->
+
+    <!-- <section class="h-[100vh]">
       <p>
         “It was fun to break from our routine of building MVPs with early-stage
         startups to blend into a team of executives. Spoiler: we did just as
         good.”
       </p>
-    </section>
+    </section> -->
   </main>
 </template>
 <script>
@@ -133,6 +140,19 @@ if (typeof window !== 'undefined') {
 }
 export default {
   mounted() {
+    let test = gsap.timeline({
+      scrollTrigger: {
+        trigger: 'hero',
+        start: 'top top',
+        scrub: true,
+      },
+    })
+
+    test.to('.hero-content', {
+      y: '100%',
+    })
+
+    // section 1 animation
     let tl = gsap.timeline({
       scrollTrigger: {
         trigger: '.section1',
