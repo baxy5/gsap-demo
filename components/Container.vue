@@ -5,21 +5,21 @@
       :class="`${container}`"
     >
       <div
-        class="flex justify-center text-white gap-24 p-12"
+        class="flex justify-center text-white gap-24 p-12 flex-col xl:flex-row"
         :class="`${child}`"
       >
-        <div class="w-[25rem]">
-          <h1 class="text-[3.5rem] font-bold">MOL</h1>
-          <p class="text-[2rem]">
+        <div class="w-full xl:w-[25rem]">
+          <h1 class="text-[2.5rem] md:text-[3.5rem] font-bold">MOL</h1>
+          <p class="text-[1rem] md:text-[2rem]">
             Short text about the project. What it is, what impact it has had.
             Who we worked with, maybe a few words about the partner. In 3-5
             lines. Highlight the main point & make it interesting.
           </p>
         </div>
-        <div class="flex justify-center items-center">
+        <div class="flex justify-center items-center lg:gap-8 xl:gap-0">
           <img src="../assets/voda-mobile.png" alt="v" />
-          <img src="../assets/voda-mobile.png" alt="v" />
-          <img src="../assets/voda-mobile.png" alt="v" />
+          <img src="../assets/voda-mobile.png" alt="v" class="hidden md:block"/>
+          <img src="../assets/voda-mobile.png" alt="v" class="hidden lg:block" />
         </div>
       </div>
     </section>

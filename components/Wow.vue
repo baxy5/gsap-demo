@@ -6,13 +6,13 @@
     >
       <p
         id="text1"
-        class="absolute top-[40%] left-[20%] text-white text-[4rem] z-50"
+        class="absolute top-[40%] left-[20%] text-white text-[2rem] lg:text-[4rem] z-50"
       >
         We love to wow
       </p>
       <p
         id="text2"
-        class="absolute top-[40%] left-[20%] text-white text-[4rem] z-50"
+        class="absolute top-[40%] left-[20%] text-white text-[2rem] lg:text-[4rem] z-50"
       >
         We love to wow2
       </p>
@@ -58,59 +58,110 @@ export default {
         trigger: '.svg',
         scrub: 1,
         pin: '#container',
+        pinSpacer: false,
         start: 'center center',
       },
     })
 
-    tl.set(['#text1', '#text2'], {
-      opacity: 0,
-      y: 120,
+    let mm = gsap.matchMedia()
+
+    mm.add('(min-width: 1024px)', () => {
+      tl.set(['#text1', '#text2'], {
+        opacity: 0,
+        y: 120,
+      })
+        .set('.appic', {
+          opacity: 0,
+        })
+        .set('.svg', {
+          scale: 8,
+        })
+        .to('.svg', {
+          scale: 2.5,
+        })
+        .to('#text1', {
+          opacity: 4,
+          y: 0,
+        })
+        .to('#text1', {
+          opacity: 0,
+          y: -120,
+        })
+        .to('.svg', {
+          scale: 1.5,
+        })
+        .to('#text2', {
+          opacity: 4,
+          y: 0,
+        })
+        .to('#text2', {
+          opacity: 0,
+          y: -120,
+        })
+        .to('.svg', {
+          scale: 0.3,
+        })
+        .to(
+          '#path',
+          {
+            fill: 'url(#gradient)',
+          },
+          '<'
+        )
+        .to('.appic', {
+          opacity: 4,
+          display: 'block',
+        })
     })
-      .set('.appic', {
+
+    mm.add('(max-width: 1023px)', () => {
+      tl.set(['#text1', '#text2'], {
         opacity: 0,
-        display: 'hidden',
+        y: 120,
       })
-      .set('.svg', {
-        scale: 8,
-        display: 'hidden',
-      })
-      .to('.svg', {
-        display: 'block',
-        scale: 2.5,
-      })
-      .to('#text1', {
-        opacity: 4,
-        y: 0,
-      })
-      .to('#text1', {
-        opacity: 0,
-        y: -120,
-      })
-      .to('.svg', {
-        scale: 1.5,
-      })
-      .to('#text2', {
-        opacity: 4,
-        y: 0,
-      })
-      .to('#text2', {
-        opacity: 0,
-        y: -120,
-      })
-      .to('.svg', {
-        scale: 0.3,
-      })
-      .to(
-        '#path',
-        {
-          fill: 'url(#gradient)',
-        },
-        '<'
-      )
-      .to('.appic', {
-        opacity: 4,
-        display: 'block',
-      })
+        .set('.appic', {
+          opacity: 0,
+        })
+        .set('.svg', {
+          scale: 8,
+        })
+        .to('.svg', {
+          scale: 2.5,
+        })
+        .to('#text1', {
+          opacity: 4,
+          y: 0,
+        })
+        .to('#text1', {
+          opacity: 0,
+          y: -120,
+        })
+        .to('.svg', {
+          scale: 1.5,
+        })
+        .to('#text2', {
+          opacity: 4,
+          y: 0,
+        })
+        .to('#text2', {
+          opacity: 0,
+          y: -120,
+        })
+        .to('.svg', {
+          scale: 0.4,
+        })
+        .to(
+          '#path',
+          {
+            fill: 'url(#gradient)',
+          },
+          '<'
+        )
+        .to('.appic', {
+          opacity: 4,
+          display: 'block',
+        })
+    })
   },
 }
 </script>

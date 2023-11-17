@@ -3,7 +3,7 @@
     <div class="h-full w-full flex flex-col justify-between">
       <div class="hero flex justify-between items-center">
         <img src="../assets/appic-logo.png" alt="" height="150" width="150" />
-        <ul class="flex items-center gap-10">
+        <ul class="hidden md:flex items-center gap-10">
           <li>our work</li>
           <li>services</li>
           <li>join us</li>
@@ -33,11 +33,9 @@ export default {
       scrollTrigger: {
         trigger: '.hero-container',
         pin: '.hero-container', // akkor Pinel amikor a "scroller-start" eléri a "start" vonalat, magyarán amikor elindul az animáció
-        pinSpacing: false, // automatikusan rak annyi spacinget mind az "end" ebben az esetbel 1500px, ezzel kikapcsoljuk és nem lesz
         scrub: true,
         start: 'top top',
         end: 'bottom top',
-        markers: true,
       },
     })
 
