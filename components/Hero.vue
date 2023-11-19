@@ -33,9 +33,9 @@ export default {
       scrollTrigger: {
         trigger: '.hero-container',
         pin: '.hero-container', // akkor Pinel amikor a "scroller-start" eléri a "start" vonalat, magyarán amikor elindul az animáció
-        scrub: true,
+        scrub: 1,
         start: 'top top',
-        end: 'bottom top',
+        end: '+=1500',
       },
     })
 

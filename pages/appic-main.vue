@@ -1,22 +1,12 @@
 <template>
   <main class="overflow-hidden bg-[#001323]">
-    <section
-      class="appic-logo-container h-[100vh] bg-[#001323] flex justify-center items-center"
-    >
-      <img
-        class="appic-logo"
-        src="../assets/appic-logo.png"
-        alt="a"
-        height="150"
-        width="150"
-      />
-    </section>
+    <Logo />
     <Container container="scale-container" child="scale" />
     <Container container="scale-container2" child="scale2" />
     <Container container="scale-container3" child="scale3" />
     <Hero />
     <Wow />
-    <section><p class="text-white">asd</p></section>
+    <section class="h-[100vh]"><p class="text-white">asd</p></section>
   </main>
 </template>
 <script>
@@ -25,6 +15,7 @@ import { ScrollTrigger } from 'gsap/all'
 import Container from '~/components/Container.vue'
 import Hero from '~/components/Hero.vue'
 import Wow from '~/components/Wow.vue'
+import Logo from '~/components/Logo.vue'
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger)
@@ -34,20 +25,9 @@ export default {
     Container,
     Hero,
     Wow,
+    Logo,
   },
-  mounted() {
-    // Landing logo animation
-    gsap.set('.appic-logo', { opacity: 4 })
-    gsap.to('.appic-logo', {
-      opacity: 0,
-      scrollTrigger: {
-        trigger: '.appic-logo-container',
-        scrub: true,
-        end: '+=700',
-        pin: '.appic-logo-container',
-      },
-    })
-  },
+  mounted() {},
 }
 </script>
 <style lang=""></style>

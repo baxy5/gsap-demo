@@ -18,8 +18,16 @@
         </div>
         <div class="flex justify-center items-center lg:gap-8 xl:gap-0">
           <img src="../assets/voda-mobile.png" alt="v" />
-          <img src="../assets/voda-mobile.png" alt="v" class="hidden md:block"/>
-          <img src="../assets/voda-mobile.png" alt="v" class="hidden lg:block" />
+          <img
+            src="../assets/voda-mobile.png"
+            alt="v"
+            class="hidden md:block"
+          />
+          <img
+            src="../assets/voda-mobile.png"
+            alt="v"
+            class="hidden lg:block"
+          />
         </div>
       </div>
     </section>
@@ -38,28 +46,30 @@ export default {
     let scaleTimeline = gsap.timeline({
       scrollTrigger: {
         trigger: '.' + this.container,
-        start: 'top',
-        end: 'bottom',
-        scrub: 2,
+        start: 'top top',
+        end: '+=1500',
+        scrub: 1,
         pin: '.' + this.container,
-        pinSpacing: false,
+        //pinSpacing: false,
       },
     })
 
     scaleTimeline
-      .from('.' + this.child, {
+      .set('.' + this.child, {
         scale: 3,
         opacity: 0,
-        duration: 1,
       })
       .to('.' + this.child, {
         scale: 1,
-        duration: 0.5,
+        opacity: 4,
+      })
+      .to('.' + this.child, {
+        scale: 1,
+        duration: 1,
       })
       .to('.' + this.child, {
         scale: 0,
         opacity: 0,
-        duration: 1,
       })
   },
 }

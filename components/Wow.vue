@@ -1,7 +1,7 @@
 <template>
   <main class="overflow-hidden">
     <div
-      id="container"
+      id="wow-container"
       class="relative bg-white h-[100vh] w-full flex justify-center items-center"
     >
       <p
@@ -55,11 +55,13 @@ export default {
   mounted() {
     let tl = gsap.timeline({
       scrollTrigger: {
-        trigger: '.svg',
+        trigger: '#wow-container',
         scrub: 1,
-        pin: '#container',
-        pinSpacer: false,
+        pin: '#wow-container',
+        pinSpacer: false, // ez a kettö amugy fölösleges szerintem ide mert semmit nem csinálnak kb
+        pinSpacig: false, // ez is megrohadhat
         start: 'center center',
+        end: '+=2000',
       },
     })
 
@@ -78,28 +80,35 @@ export default {
         })
         .to('.svg', {
           scale: 2.5,
+          duration: 50,
         })
         .to('#text1', {
           opacity: 4,
           y: 0,
+          duration: 50,
         })
         .to('#text1', {
           opacity: 0,
           y: -120,
+          duration: 50,
         })
         .to('.svg', {
           scale: 1.5,
+          duration: 50,
         })
         .to('#text2', {
           opacity: 4,
           y: 0,
+          duration: 50,
         })
         .to('#text2', {
           opacity: 0,
           y: -120,
+          duration: 50,
         })
         .to('.svg', {
           scale: 0.3,
+          duration: 100,
         })
         .to(
           '#path',
@@ -111,6 +120,7 @@ export default {
         .to('.appic', {
           opacity: 4,
           display: 'block',
+          duration: 100,
         })
     })
 
