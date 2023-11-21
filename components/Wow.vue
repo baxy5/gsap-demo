@@ -137,11 +137,11 @@ export default {
           scale: 0.3,
           duration: 70,
         })
-        .to(
+        .from(
           '#text1',
           {
-            opacity: 4,
-            scale: 1,
+            opacity: 0,
+            scale: 10,
             duration: 20,
           },
           '<'
@@ -150,16 +150,16 @@ export default {
           '#text1',
           {
             opacity: 0,
-            scale: 1.5,
+            scale: 0,
             duration: 10,
           },
           25
         )
-        .to(
+        .from(
           '#text2',
           {
-            opacity: 4,
-            scale: 1,
+            opacity: 0,
+            scale: 10,
             duration: 15,
           },
           30
@@ -168,7 +168,7 @@ export default {
           '#text2',
           {
             opacity: 0,
-            scale: 1.5,
+            scale: 0,
             duration: 10,
           },
           45
