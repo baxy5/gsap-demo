@@ -68,9 +68,9 @@ export default {
     let mm = gsap.matchMedia()
 
     mm.add('(min-width: 1024px)', () => {
-      tl.set(['#text1', '#text2'], {
+      /* tl.set(['#text1', '#text2'], {
         opacity: 0,
-        y: 120,
+        scale: 0,
       })
         .set('.appic', {
           opacity: 0,
@@ -84,12 +84,12 @@ export default {
         })
         .to('#text1', {
           opacity: 4,
-          y: 0,
+          scale: 1,
           duration: 50,
         })
         .to('#text1', {
           opacity: 0,
-          y: -120,
+          scale: 1.5,
           duration: 50,
         })
         .to('.svg', {
@@ -98,12 +98,12 @@ export default {
         })
         .to('#text2', {
           opacity: 4,
-          y: 0,
+          scale: 1,
           duration: 50,
         })
         .to('#text2', {
           opacity: 0,
-          y: -120,
+          scale: 1.5,
           duration: 50,
         })
         .to('.svg', {
@@ -121,11 +121,74 @@ export default {
           opacity: 4,
           display: 'block',
           duration: 100,
+        }) */
+
+      tl.set(['#text1', '#text2'], {
+        opacity: 0,
+        scale: 0,
+      })
+        .set('.appic', {
+          opacity: 0,
+        })
+        .set('.svg', {
+          scale: 8,
+        })
+        .to('.svg', {
+          scale: 0.3,
+          duration: 70,
+        })
+        .to(
+          '#text1',
+          {
+            opacity: 4,
+            scale: 1,
+            duration: 20,
+          },
+          '<'
+        )
+        .to(
+          '#text1',
+          {
+            opacity: 0,
+            scale: 1.5,
+            duration: 10,
+          },
+          25
+        )
+        .to(
+          '#text2',
+          {
+            opacity: 4,
+            scale: 1,
+            duration: 15,
+          },
+          30
+        )
+        .to(
+          '#text2',
+          {
+            opacity: 0,
+            scale: 1.5,
+            duration: 10,
+          },
+          45
+        )
+        .to(
+          '#path',
+          {
+            fill: 'url(#gradient)',
+          },
+          '<'
+        )
+        .to('.appic', {
+          opacity: 4,
+          display: 'block',
+          duration: 100,
         })
     })
 
     mm.add('(max-width: 1023px)', () => {
-      tl.set(['#text1', '#text2'], {
+      /* tl.set(['#text1', '#text2'], {
         opacity: 0,
         y: 120,
       })
@@ -170,6 +233,69 @@ export default {
         .to('.appic', {
           opacity: 4,
           display: 'block',
+        }) */
+
+        tl.set(['#text1', '#text2'], {
+        opacity: 0,
+        scale: 0,
+      })
+        .set('.appic', {
+          opacity: 0,
+        })
+        .set('.svg', {
+          scale: 8,
+        })
+        .to('.svg', {
+          scale: 0.3,
+          duration: 70,
+        })
+        .to(
+          '#text1',
+          {
+            opacity: 4,
+            scale: 1,
+            duration: 20,
+          },
+          '<'
+        )
+        .to(
+          '#text1',
+          {
+            opacity: 0,
+            scale: 1.5,
+            duration: 10,
+          },
+          25
+        )
+        .to(
+          '#text2',
+          {
+            opacity: 4,
+            scale: 1,
+            duration: 15,
+          },
+          30
+        )
+        .to(
+          '#text2',
+          {
+            opacity: 0,
+            scale: 1.5,
+            duration: 10,
+          },
+          45
+        )
+        .to(
+          '#path',
+          {
+            fill: 'url(#gradient)',
+          },
+          '<'
+        )
+        .to('.appic', {
+          opacity: 4,
+          display: 'block',
+          duration: 40,
         })
     })
   },
