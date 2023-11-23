@@ -1,6 +1,13 @@
 <template>
   <main>
-    <section class="hero h-full w-full bg-[#D3DEE5] px-[1.5rem] pb-8">
+    <section
+      class="bg-[#D3DEE5] w-full fixed flex justify-between p-4 font-bold z-[90]"
+    >
+      <p>Appic</p>
+      <p>Menu</p>
+    </section>
+
+    <section class="hero h-full w-full bg-[#D3DEE5] px-[1.5rem] pt-12 pb-8">
       <div class="hero-content">
         <h1 class="text-[2.5rem] text-[#FF4A31] font-[800]">Project title</h1>
         <p class="text-[1.375rem] text-[#0D283F] font-[800]">
@@ -97,8 +104,8 @@
       </div>
     </section>
 
-    <!-- <section class="section2 text-[#0D283F] bg-[#D3DEE5] px-[1.5rem]">
-      <div class="relative">
+    <section class="section2 text-[#0D283F] bg-[#D3DEE5] px-[1.5rem] pt-36">
+      <div id="second-container" class="relative">
         <div class="desc3">
           <h2 class="text-[#FF4A31] text-[1rem] font-[800] uppercase">
             result
@@ -109,7 +116,9 @@
             easily scalable mobile application.
           </p>
         </div>
-        <div class="flex justify-center items-center text-center pt-16">
+        <div
+          class="flex flex-col justify-center items-center text-center pt-16"
+        >
           <div
             class="box1 text-[#001826] p-[3rem] bg-white rounded-[2rem] w-[19rem] flex items-center justify-center flex-col"
           >
@@ -117,9 +126,23 @@
             <p class="text-[1.125rem] font-[600]">Based on 23 000</p>
             <p class="text-[1.125rem] font-[600]">Appstore review</p>
           </div>
+          <div
+            class="box2 text-[#001826] p-[3rem] bg-white rounded-[2rem] w-[19rem] flex items-center justify-center flex-col"
+          >
+            <p class="text-[3.5rem] font-[500] pb-[1.5rem]">3,3</p>
+            <p class="text-[1.125rem] font-[600]">Based on 23 000</p>
+            <p class="text-[1.125rem] font-[600]">Appstore review</p>
+          </div>
+          <div
+            class="box3 text-[#001826] p-[3rem] bg-white rounded-[2rem] w-[19rem] flex items-center justify-center flex-col"
+          >
+            <p class="text-[3.5rem] font-[500] pb-[1.5rem]">4,5</p>
+            <p class="text-[1.125rem] font-[600]">Based on 23 000</p>
+            <p class="text-[1.125rem] font-[600]">Appstore review</p>
+          </div>
         </div>
       </div>
-    </section> -->
+    </section>
 
     <!-- <section class="h-[100vh]">
       <p>
@@ -142,13 +165,14 @@ export default {
   mounted() {
     let test = gsap.timeline({
       scrollTrigger: {
-        trigger: 'hero',
+        trigger: '.hero',
         start: 'top top',
         scrub: true,
       },
     })
 
     test.to('.hero-content', {
+      opacity: 0,
       y: '100%',
     })
 
@@ -157,9 +181,8 @@ export default {
       scrollTrigger: {
         trigger: '.section1',
         pin: '.section1',
-        pinSpacer: false,
         scrub: 1,
-        markers: true,
+        start: 'top 56px',
       },
     })
 
@@ -173,7 +196,6 @@ export default {
       })
       .to('.desc1', {
         opacity: 0,
-        y: -25,
       })
       .to('.desc2', {
         opacity: 4,
@@ -191,7 +213,40 @@ export default {
         },
         '<'
       )
+
+    // section 2 animation
+    let tl2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.section1',
+        pin: '.section2',
+        pinSpacing: false,
+        start: 'bottom bottom',
+        scrub: 1,
+        markers: true,
+      },
+    })
+
+    tl2
+      .set('#second-container', {
+        opacity: 0,
+        y: 120,
+      })
+      .set(['.box1', '.box2', '.box3'], {
+        opacity: 0,
+        y: 120,
+      })
+      .to('#second-container', {
+        opacity: 4,
+        y: 0,
+      })
+      .to('.box1', {
+        y: 0,
+        opacity: 4,
+      })
+      .to('.box1', {
+        scale: 0.7,
+        opacity: 0.7,
+      })
   },
 }
 </script>
-<style lang=""></style>
