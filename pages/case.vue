@@ -126,20 +126,6 @@
             <p class="text-[1.125rem] font-[600]">Based on 23 000</p>
             <p class="text-[1.125rem] font-[600]">Appstore review</p>
           </div>
-          <div
-            class="box2 text-[#001826] p-[3rem] bg-white rounded-[2rem] w-[19rem] flex items-center justify-center flex-col"
-          >
-            <p class="text-[3.5rem] font-[500] pb-[1.5rem]">3,3</p>
-            <p class="text-[1.125rem] font-[600]">Based on 23 000</p>
-            <p class="text-[1.125rem] font-[600]">Appstore review</p>
-          </div>
-          <div
-            class="box3 text-[#001826] p-[3rem] bg-white rounded-[2rem] w-[19rem] flex items-center justify-center flex-col"
-          >
-            <p class="text-[3.5rem] font-[500] pb-[1.5rem]">4,5</p>
-            <p class="text-[1.125rem] font-[600]">Based on 23 000</p>
-            <p class="text-[1.125rem] font-[600]">Appstore review</p>
-          </div>
         </div>
       </div>
     </section>
@@ -225,28 +211,6 @@ export default {
         markers: true,
       },
     })
-
-    tl2
-      .set('#second-container', {
-        opacity: 0,
-        y: 120,
-      })
-      .set(['.box1', '.box2', '.box3'], {
-        opacity: 0,
-        y: 120,
-      })
-      .to('#second-container', {
-        opacity: 4,
-        y: 0,
-      })
-      .to('.box1', {
-        y: 0,
-        opacity: 4,
-      })
-      .to('.box1', {
-        scale: 0.7,
-        opacity: 0.7,
-      })
   },
 }
 </script>
