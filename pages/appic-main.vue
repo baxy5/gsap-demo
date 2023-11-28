@@ -4,7 +4,7 @@
     <Container container="scale-container" child="scale" />
     <Container container="scale-container2" child="scale2" />
     <Container container="scale-container3" child="scale3" />
-    <Hero />
+    <Hero /> 
     <Wow />
     <section class="h-[100vh]"><p class="text-white">asd</p></section>
   </main>

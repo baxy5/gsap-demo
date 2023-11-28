@@ -6,13 +6,13 @@
     >
       <p
         id="text1"
-        class="absolute top-[40%] left-[20%] text-white text-[2rem] lg:text-[4rem] z-50"
+        class="absolute flex justify-center items-center text-white text-[3.5rem] lg:text-[7rem] z-50"
       >
         We love to wow
       </p>
       <p
         id="text2"
-        class="absolute top-[40%] left-[20%] text-white text-[2rem] lg:text-[4rem] z-50"
+        class="absolute top-[40%] left-[20%] text-white text-[3.5rem] lg:text-[4rem] z-50"
       >
         We love to wow2
       </p>
@@ -53,80 +53,51 @@ if (typeof window !== 'undefined') {
 
 export default {
   mounted() {
-    let tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: '#wow-container',
-        scrub: 1,
-        pin: '#wow-container',
-        pinSpacer: false, // ez a kettö amugy fölösleges szerintem ide mert semmit nem csinálnak kb
-        pinSpacig: false, // ez is megrohadhat
-        start: 'center center',
-        end: '+=2000',
-      },
-    })
-
     let mm = gsap.matchMedia()
 
     mm.add('(min-width: 1024px)', () => {
-      /* tl.set(['#text1', '#text2'], {
-        opacity: 0,
-        scale: 0,
+      // Appic Logo animáció
+      let appicLogoAnimation = gsap.timeline({
+        scrollTrigger: {
+          trigger: '#wow-container',
+          scrub: 1,
+          pin: '#wow-container',
+          pinSpacer: false, // ez a kettö amugy fölösleges szerintem ide mert semmit nem csinálnak kb
+          pinSpacig: false, // ez is megrohadhat
+          start: 'top top',
+          end: '+=4100',
+        },
       })
-        .set('.appic', {
-          opacity: 0,
-        })
-        .set('.svg', {
-          scale: 8,
-        })
-        .to('.svg', {
-          scale: 2.5,
-          duration: 50,
-        })
-        .to('#text1', {
-          opacity: 4,
-          scale: 1,
-          duration: 50,
-        })
-        .to('#text1', {
-          opacity: 0,
-          scale: 1.5,
-          duration: 50,
-        })
-        .to('.svg', {
-          scale: 1.5,
-          duration: 50,
-        })
-        .to('#text2', {
-          opacity: 4,
-          scale: 1,
-          duration: 50,
-        })
-        .to('#text2', {
-          opacity: 0,
-          scale: 1.5,
-          duration: 50,
-        })
-        .to('.svg', {
-          scale: 0.3,
-          duration: 100,
-        })
-        .to(
-          '#path',
-          {
-            fill: 'url(#gradient)',
-          },
-          '<'
-        )
-        .to('.appic', {
-          opacity: 4,
-          display: 'block',
-          duration: 100,
-        }) */
 
-      tl.set(['#text1', '#text2'], {
-        opacity: 0,
-        scale: 0,
+      // "We love to wow" - animation
+      let textAnimation = gsap.timeline({
+        scrollTrigger: {
+          trigger: '#text1',
+          start: 'top top',
+          end: '+=1200px',
+          scrub: 1,
+        },
       })
+
+      textAnimation
+        .from('#text1', {
+          scale: 4,
+          opacity: 0,
+        })
+        .to('#text1', {
+          scale: 0,
+          opacity: 0,
+        })
+        .from('#text2', {
+          scale: 4,
+          opacity: 0,
+        })
+        .to('#text2', {
+          scale: 0,
+          opacity: 0,
+        })
+
+      appicLogoAnimation
         .set('.appic', {
           opacity: 0,
         })
@@ -135,110 +106,75 @@ export default {
         })
         .to('.svg', {
           scale: 0.3,
-          duration: 70,
+          onUpdate: () => {
+            if (gsap.getProperty('.svg', 'scale') <= 1.8) {
+              gsap.to(
+                '#path',
+                {
+                  fill: 'url(#gradient)',
+                },
+                '<'
+              )
+            } else {
+              gsap.to(
+                '#path',
+                {
+                  fill: '#001323',
+                },
+                '<'
+              )
+            }
+          },
         })
-        .from(
-          '#text1',
-          {
-            opacity: 0,
-            scale: 10,
-            duration: 20,
-          },
-          '<'
-        )
-        .to(
-          '#text1',
-          {
-            opacity: 0,
-            scale: 0,
-            duration: 10,
-          },
-          25
-        )
-        .from(
-          '#text2',
-          {
-            opacity: 0,
-            scale: 10,
-            duration: 15,
-          },
-          30
-        )
-        .to(
-          '#text2',
-          {
-            opacity: 0,
-            scale: 0,
-            duration: 10,
-          },
-          45
-        )
-        .to(
-          '#path',
-          {
-            fill: 'url(#gradient)',
-          },
-          '<'
-        )
         .to('.appic', {
           opacity: 4,
           display: 'block',
-          duration: 100,
         })
     })
 
     mm.add('(max-width: 1023px)', () => {
-      /* tl.set(['#text1', '#text2'], {
-        opacity: 0,
-        y: 120,
+      // Appic Logo animáció
+      let appicLogoAnimation = gsap.timeline({
+        scrollTrigger: {
+          trigger: '#wow-container',
+          scrub: 1,
+          pin: '#wow-container',
+          pinSpacer: false, // ez a kettö amugy fölösleges szerintem ide mert semmit nem csinálnak kb
+          pinSpacig: false, // ez is megrohadhat
+          start: 'top top',
+          end: '+=4400',
+        },
       })
-        .set('.appic', {
-          opacity: 0,
-        })
-        .set('.svg', {
-          scale: 8,
-        })
-        .to('.svg', {
-          scale: 2.5,
-        })
-        .to('#text1', {
-          opacity: 4,
-          y: 0,
-        })
-        .to('#text1', {
-          opacity: 0,
-          y: -120,
-        })
-        .to('.svg', {
-          scale: 1.5,
-        })
-        .to('#text2', {
-          opacity: 4,
-          y: 0,
-        })
-        .to('#text2', {
-          opacity: 0,
-          y: -120,
-        })
-        .to('.svg', {
-          scale: 0.4,
-        })
-        .to(
-          '#path',
-          {
-            fill: 'url(#gradient)',
-          },
-          '<'
-        )
-        .to('.appic', {
-          opacity: 4,
-          display: 'block',
-        }) */
 
-        tl.set(['#text1', '#text2'], {
-        opacity: 0,
-        scale: 0,
+      // "We love to wow" - animation
+      let textAnimation = gsap.timeline({
+        scrollTrigger: {
+          trigger: '#text1',
+          start: 'top top',
+          end: '+=1200px',
+          scrub: 1,
+        },
       })
+
+      textAnimation
+        .from('#text1', {
+          scale: 4,
+          opacity: 0,
+        })
+        .to('#text1', {
+          scale: 0,
+          opacity: 0,
+        })
+        .from('#text2', {
+          scale: 4,
+          opacity: 0,
+        })
+        .to('#text2', {
+          scale: 0,
+          opacity: 0,
+        })
+
+      appicLogoAnimation
         .set('.appic', {
           opacity: 0,
         })
@@ -247,55 +183,29 @@ export default {
         })
         .to('.svg', {
           scale: 0.3,
-          duration: 70,
+          onUpdate: () => {
+            if (gsap.getProperty('.svg', 'scale') <= 1.8) {
+              gsap.to(
+                '#path',
+                {
+                  fill: 'url(#gradient)',
+                },
+                '<'
+              )
+            } else {
+              gsap.to(
+                '#path',
+                {
+                  fill: '#001323',
+                },
+                '<'
+              )
+            }
+          },
         })
-        .to(
-          '#text1',
-          {
-            opacity: 4,
-            scale: 1,
-            duration: 20,
-          },
-          '<'
-        )
-        .to(
-          '#text1',
-          {
-            opacity: 0,
-            scale: 1.5,
-            duration: 10,
-          },
-          25
-        )
-        .to(
-          '#text2',
-          {
-            opacity: 4,
-            scale: 1,
-            duration: 15,
-          },
-          30
-        )
-        .to(
-          '#text2',
-          {
-            opacity: 0,
-            scale: 1.5,
-            duration: 10,
-          },
-          45
-        )
-        .to(
-          '#path',
-          {
-            fill: 'url(#gradient)',
-          },
-          '<'
-        )
         .to('.appic', {
           opacity: 4,
           display: 'block',
-          duration: 40,
         })
     })
   },
