@@ -35,7 +35,7 @@ export default {
         pin: '.hero-container', // akkor Pinel amikor a "scroller-start" eléri a "start" vonalat, magyarán amikor elindul az animáció
         scrub: 1,
         start: 'top top',
-        end: '+=1500',
+        end: '+=4000',
       },
     })
 

@@ -29,7 +29,7 @@ export default {
       scrollTrigger: {
         trigger: '.appic-logo-container',
         scrub: true,
-        end: '+=700',
+        end: '+=1500',
         pin: '.appic-logo-container',
       },
     })

@@ -47,14 +47,25 @@ export default {
       scrollTrigger: {
         trigger: '.' + this.container,
         start: 'top top',
-        end: '+=1500',
+        end: '+=4000',
         scrub: 1,
         pin: '.' + this.container,
+        fastScrollEnd: true, // vegen gyorsabban eltünik
         //pinSpacing: false,
       },
     })
 
     scaleTimeline
+      .from('.' + this.child, {
+        scale: 3,
+        opacity: 0,
+      })
+      .to('.' + this.child, {
+        scale: 0,
+        opacity: 0,
+      })
+
+    /* scaleTimeline
       .set('.' + this.child, {
         scale: 3,
         opacity: 0,
@@ -65,12 +76,11 @@ export default {
       })
       .to('.' + this.child, {
         scale: 1,
-        duration: 1,
       })
       .to('.' + this.child, {
         scale: 0,
         opacity: 0,
-      })
+      }) */
   },
 }
 </script>
