@@ -36,6 +36,7 @@ export default {
         scrub: 1,
         start: 'top top',
         end: '+=4000',
+        fastScrollEnd: true,
       },
     })
 

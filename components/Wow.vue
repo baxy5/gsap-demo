@@ -65,7 +65,7 @@ export default {
           pinSpacer: false, // ez a kettö amugy fölösleges szerintem ide mert semmit nem csinálnak kb
           pinSpacig: false, // ez is megrohadhat
           start: 'top top',
-          end: '+=4100',
+          end: '+=4400',
         },
       })
 
@@ -74,7 +74,7 @@ export default {
         scrollTrigger: {
           trigger: '#text1',
           start: 'top top',
-          end: '+=1200px',
+          end: '+=1500px',
           scrub: 1,
         },
       })

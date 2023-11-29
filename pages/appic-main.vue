@@ -12,10 +12,10 @@
 <script>
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
+import Logo from '~/components/Logo.vue'
 import Container from '~/components/Container.vue'
 import Hero from '~/components/Hero.vue'
 import Wow from '~/components/Wow.vue'
-import Logo from '~/components/Logo.vue'
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger)

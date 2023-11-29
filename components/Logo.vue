@@ -28,9 +28,10 @@ export default {
       opacity: 0,
       scrollTrigger: {
         trigger: '.appic-logo-container',
-        scrub: true,
+        scrub: 1,
         end: '+=1500',
         pin: '.appic-logo-container',
+        fastScrollEnd: true,
       },
     })
   },
