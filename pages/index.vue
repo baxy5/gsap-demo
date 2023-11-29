@@ -16,13 +16,13 @@
           <p class="text-xl">
             "/text-reveal" : lehetosegek + 1 appices animácio
           </p>
-          <p class="text-xl">
+          <p class="text-2xl font-bold">
             "/appic-main" : appic főoldal animáció
           </p>
           <p class="text-xl">
             "/case-study" : appic case study animáció
           </p>
-          <p class="text-xl">
+          <p class="text-2xl font-bold">
             "/case" : appic case study animáció 2.0
           </p>
           <p class="text-xl">
