@@ -66,6 +66,7 @@ export default {
           pinSpacig: false, // ez is megrohadhat
           start: 'top top',
           end: '+=4400',
+          fastScrollEnd: true,
         },
       })
 
@@ -76,6 +77,7 @@ export default {
           start: 'top top',
           end: '+=1500px',
           scrub: 1,
+          fastScrollEnd: true,
         },
       })
 
