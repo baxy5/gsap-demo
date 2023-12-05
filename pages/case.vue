@@ -73,9 +73,13 @@
       </div>
 
       <div class="section1 h-full text-[#0D283F] bg-[#D3DEE5]">
-        <img class="img md:px-[4rem]" src="../assets/ps.jpg" alt="" />
-        <div class="desc-container relative">
-          <div class="absolute px-[1.5rem] pt-8">
+        <img
+          class="img ml:px-[4rem] bg-[#D3DEE5]"
+          src="../assets/ps.jpg"
+          alt=""
+        />
+        <div class="desc-container">
+          <div class="absolute bg-[#D3DEE5] px-[1.5rem] ml:px-[4rem] pt-8">
             <div class="desc1">
               <h2 class="text-[#FF4A31] text-[1rem] font-[800] uppercase">
                 key challenge to solve
@@ -88,7 +92,7 @@
               </p>
             </div>
           </div>
-          <div class="absolute w-full px-[1.5rem] pt-8">
+          <div class="w-full px-[1.5rem] ml:px-[4rem] pt-8">
             <div class="desc2">
               <h2 class="text-[#FF4A31] text-[1rem] font-[800] uppercase">
                 our process
@@ -103,33 +107,49 @@
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="section2 text-[#0D283F] bg-[#D3DEE5] px-[1.5rem]">
-        <div id="second-container" class="relative">
-          <div class="desc3">
-            <h2 class="text-[#FF4A31] text-[1rem] font-[800] uppercase">
-              result
-            </h2>
-            <p class="text-[1.375rem] font-[800] pt-4">
-              We have developed a mobile competence center that supports agile
-              delivery and decreases time to market, resulting in a fast and
-              easily scalable mobile application.
-            </p>
+    <section
+      class="section2 h-[100vh] text-[#0D283F] bg-[#D3DEE5] px-[1.5rem] pt-16"
+    >
+      <div id="second-container" class="relative">
+        <div class="desc3">
+          <h2 class="text-[#FF4A31] text-[1rem] font-[800] uppercase">
+            result
+          </h2>
+          <p class="text-[1.375rem] font-[800] pt-4">
+            We have developed a mobile competence center that supports agile
+            delivery and decreases time to market, resulting in a fast and
+            easily scalable mobile application.
+          </p>
+        </div>
+        <div class="flex flex-col justify-center items-center text-center pt-8">
+          <div
+            class="box1 text-[#001826] p-[3rem] bg-white rounded-[2rem] w-[19rem] flex items-center justify-center flex-col"
+          >
+            <p class="text-[3.5rem] font-[500] pb-[1.5rem]">4,4</p>
+            <p class="text-[1.125rem] font-[600]">Based on 23 000</p>
+            <p class="text-[1.125rem] font-[600]">Appstore review</p>
           </div>
           <div
-            class="flex flex-col justify-center items-center text-center pt-16"
+            class="box2 text-[#001826] p-[3rem] bg-white rounded-[2rem] w-[19rem] flex items-center justify-center flex-col"
           >
-            <div
-              class="box1 text-[#001826] p-[3rem] bg-white rounded-[2rem] w-[19rem] flex items-center justify-center flex-col"
-            >
-              <p class="text-[3.5rem] font-[500] pb-[1.5rem]">4,4</p>
-              <p class="text-[1.125rem] font-[600]">Based on 23 000</p>
-              <p class="text-[1.125rem] font-[600]">Appstore review</p>
-            </div>
+            <p class="text-[3.5rem] font-[500] pb-[1.5rem]">4,4</p>
+            <p class="text-[1.125rem] font-[600]">Based on 23 000</p>
+            <p class="text-[1.125rem] font-[600]">Appstore review</p>
+          </div>
+          <div
+            class="box3 text-[#001826] p-[3rem] bg-white rounded-[2rem] w-[19rem] flex items-center justify-center flex-col"
+          >
+            <p class="text-[3.5rem] font-[500] pb-[1.5rem]">4,4</p>
+            <p class="text-[1.125rem] font-[600]">Based on 23 000</p>
+            <p class="text-[1.125rem] font-[600]">Appstore review</p>
           </div>
         </div>
       </div>
     </section>
+
+    <section class="h-[100vh]">asd</section>
 
     <!-- <section class="h-[100vh]">
       <p>
@@ -150,45 +170,44 @@ if (typeof window !== 'undefined') {
 }
 export default {
   mounted() {
-    let tl = gsap.timeline({
+    let heroAnimation = gsap.timeline({
       scrollTrigger: {
         trigger: '.hero',
         start: 'top top',
-        end: 'bottom bottom',
         pin: '.hero-content',
         pinSpacing: false,
         scrub: 1,
+        fastScrollEnd: true, // vegen gyorsabban eltünik
       },
     })
 
-    tl.set('.section1', {
-      y: '40px',
-    }).to('.hero-content', {
-      opacity: 0,
-      display: 'hidden',
-    })
+    heroAnimation
+      .set('.section1', {
+        y: '40px',
+      })
+      .to('.hero-content', {
+        opacity: 0,
+        display: 'hidden',
+      })
 
-    let tl2 = gsap.timeline({
+    let imageDetailsSection = gsap.timeline({
       scrollTrigger: {
         trigger: '.section1',
         start: 'top top+=60px',
-        end: '+=1200',
+        end: '+=2000',
         pin: '.section1',
         scrub: 1,
-        markers: true,
+        fastScrollEnd: true, // vegen gyorsabban eltünik
       },
     })
 
-    tl2
+    imageDetailsSection
       .set('.desc1', {
         opacity: 0,
       })
       .set('.desc2', {
         opacity: 0,
         y: 100,
-      })
-      .set('.section2', {
-        opacity: 0,
       })
       .to('.desc1', {
         opacity: 4,
@@ -204,10 +223,68 @@ export default {
         opacity: 0,
         y: -100,
       })
-      .to('.section2', {
-        opacity: 4,
-        y: '-30%'
+
+    let cardsAnimation = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.section2',
+        start: 'top top+=60px',
+        end: '+=2500',
+        pin: '.section2',
+        scrub: 1,
+        fastScrollEnd: true, // vegen gyorsabban eltünik
+      },
+    })
+
+    cardsAnimation
+      .set(['.box2', '.box3'], {
+        opacity: 0,
       })
+      .from(
+        '.desc3',
+        {
+          opacity: 0,
+          y: 100,
+        },
+        '<'
+      )
+      .from(
+        '.box1',
+        {
+          opacity: 0,
+          y: 100,
+        },
+        0.3
+      )
+      .to('.box1', {
+        opacity: 0.6,
+        scale: 0.6,
+      })
+      .to(
+        '.box2',
+        {
+          opacity: 4,
+          y: -190,
+        },
+        '<'
+      )
+      .to('.box2', {
+        opacity: 0.8,
+        scale: 0.8,
+      })
+      .to(
+        '.box3',
+        {
+          opacity: 4,
+          y: -380,
+        },
+        '<'
+      )
   },
 }
 </script>
+
+<style>
+/* .pin-spacer {
+  background-color: #d3dee5;
+} */
+</style>
