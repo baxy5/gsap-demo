@@ -72,7 +72,7 @@
         </div>
       </div>
 
-      <div class="section1 h-full text-[#0D283F] bg-[#D3DEE5]">
+      <div class="section1 h-[100vh] text-[#0D283F] bg-[#D3DEE5]">
         <img
           class="img ml:px-[4rem] bg-[#D3DEE5]"
           src="../assets/ps.jpg"
@@ -177,7 +177,6 @@ export default {
         pin: '.hero-content',
         pinSpacing: false,
         scrub: 1,
-        fastScrollEnd: true, // vegen gyorsabban eltünik
       },
     })
 
@@ -197,7 +196,6 @@ export default {
         end: '+=2000',
         pin: '.section1',
         scrub: 1,
-        fastScrollEnd: true, // vegen gyorsabban eltünik
       },
     })
 
@@ -231,7 +229,6 @@ export default {
         end: '+=2500',
         pin: '.section2',
         scrub: 1,
-        fastScrollEnd: true, // vegen gyorsabban eltünik
       },
     })
 
