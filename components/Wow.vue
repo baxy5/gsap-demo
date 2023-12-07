@@ -26,12 +26,13 @@
         xmlns="http://www.w3.org/2000/svg"
       >
         <defs>
-          <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" style="stop-color: rgba(53, 48, 139, 1)" />
-            <stop offset="35%" style="stop-color: rgba(96, 96, 213, 1)" />
-            <stop offset="100%" style="stop-color: rgba(0, 212, 255, 1)" />
-          </linearGradient>
+          <radialGradient id="gradient" cx="68%" cy="35%" r="100%">
+            <stop offset="27%" style="stop-color: #5bffb0" />
+            <stop offset="50%" style="stop-color: #2279c9" />
+            <stop offset="79%" style="stop-color: #6ccbf4" />
+          </radialGradient>
         </defs>
+
         <path
           id="path"
           fill-rule="evenodd"
@@ -65,7 +66,7 @@ export default {
           pinSpacer: false, // ez a kettö amugy fölösleges szerintem ide mert semmit nem csinálnak kb
           pinSpacig: false, // ez is megrohadhat
           start: 'top top',
-          end: '+=4400',
+          end: '+=7400',
           fastScrollEnd: true,
         },
       })
@@ -75,7 +76,7 @@ export default {
         scrollTrigger: {
           trigger: '#text1',
           start: 'top top',
-          end: '+=1500px',
+          end: '+=2500px',
           scrub: 1,
           fastScrollEnd: true,
         },

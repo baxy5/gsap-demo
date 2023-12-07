@@ -44,7 +44,7 @@ export default {
       .to('.hero', {
         opacity: 2,
       })
-      .to('.hero', { opacity: 0 })
+      .to('.hero', { opacity: 0, y: '-100%' })
   },
 }
 </script>

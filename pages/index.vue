@@ -6,6 +6,12 @@
       <div class="hero flex flex-col justify-center items-center">
         <h1 class="text-7xl font-bold pb-12">GSAP Animations demo</h1>
         <div class="grid gap-5">
+          <p class="text-2xl font-bold">
+            "/appic-main" : appic főoldal animáció
+          </p>
+          <p class="text-2xl font-bold">
+            "/case-study-test" : appic case study animáció 3.0 ez már a rendes
+          </p>
           <p class="text-xl">"/" : főoldal pár egyszerübb bemutato animácio</p>
           <p class="text-xl">
             "/boxes" : properties, scrub, részletesebben az animáciok
@@ -16,15 +22,9 @@
           <p class="text-xl">
             "/text-reveal" : lehetosegek + 1 appices animácio
           </p>
-          <p class="text-2xl font-bold">
-            "/appic-main" : appic főoldal animáció
-          </p>
           <p class="text-xl">"/case-study" : appic case study animáció</p>
           <p class="text-2xl font-bold">
             "/case" : appic case study animáció 2.0
-          </p>
-          <p class="text-2xl font-bold">
-            "/case-study-test" : appic case study animáció 3.0 ez már a rendes
           </p>
           <p class="text-xl">
             "/panel" : sajat animacio - itt tudom breakpointra felosztani mikor

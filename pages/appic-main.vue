@@ -1,10 +1,11 @@
 <template>
   <main class="overflow-hidden bg-[#001323]">
     <Logo />
-    <Container container="scale-container" child="scale" />
+    <ContainerSec />
+    <!-- <Container container="scale-container" child="scale" />
     <Container container="scale-container2" child="scale2" />
-    <Container container="scale-container3" child="scale3" />
-    <Hero /> 
+    <Container container="scale-container3" child="scale3" /> -->
+    <Hero />
     <Wow />
     <section class="h-[100vh]"><p class="text-white">asd</p></section>
   </main>
@@ -16,6 +17,7 @@ import Logo from '~/components/Logo.vue'
 import Container from '~/components/Container.vue'
 import Hero from '~/components/Hero.vue'
 import Wow from '~/components/Wow.vue'
+import ContainerSec from '~/components/ContainerSec.vue'
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger)
@@ -26,6 +28,7 @@ export default {
     Hero,
     Wow,
     Logo,
+    ContainerSec,
   },
   mounted() {},
 }
