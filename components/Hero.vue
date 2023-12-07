@@ -37,6 +37,7 @@ export default {
         start: 'top top',
         end: '+=4000',
         fastScrollEnd: true,
+        markers: true,
       },
     })
 
@@ -44,7 +45,7 @@ export default {
       .to('.hero', {
         opacity: 2,
       })
-      .to('.hero', { opacity: 0, y: '-100%' })
+      .to('.hero', { opacity: 0, y: '-350%' })
   },
 }
 </script>
