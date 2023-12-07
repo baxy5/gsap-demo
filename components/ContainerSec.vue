@@ -99,7 +99,6 @@ export default {
         end: '+=8000',
         scrub: 1,
         pin: '.main-container',
-        markers: true,
       },
     })
 
