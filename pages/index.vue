@@ -19,14 +19,16 @@
           <p class="text-2xl font-bold">
             "/appic-main" : appic főoldal animáció
           </p>
-          <p class="text-xl">
-            "/case-study" : appic case study animáció
-          </p>
+          <p class="text-xl">"/case-study" : appic case study animáció</p>
           <p class="text-2xl font-bold">
             "/case" : appic case study animáció 2.0
           </p>
+          <p class="text-2xl font-bold">
+            "/case-study-test" : appic case study animáció 3.0 ez már a rendes
+          </p>
           <p class="text-xl">
-            "/panel" : sajat animacio - itt tudom breakpointra felosztani mikor milyen legyen az animacio
+            "/panel" : sajat animacio - itt tudom breakpointra felosztani mikor
+            milyen legyen az animacio
           </p>
         </div>
       </div>
