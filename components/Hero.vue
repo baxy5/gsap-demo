@@ -37,7 +37,6 @@ export default {
         start: 'top top',
         end: '+=4000',
         fastScrollEnd: true,
-        markers: true,
       },
     })
 
