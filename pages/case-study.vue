@@ -1,27 +1,37 @@
 <template>
   <main class="bg-[#D3DEE5]">
     <div>
-      <div class="flex justify-between items-center p-52">
+      <div class="flex justify-between px-52 pt-52">
         <div class="w-[500px]">
           <h1 class="text-[3.5rem] font-bold text-orange-500">Project title</h1>
-          <p class="text-[1rem] font-bold">
+          <p class="text-[1.75rem] font-bold">
             Short text about the project. What it is, what impact it has had.
             Who we worked with, maybe a few words about the partner. In 3-5
             lines. Highlight the main point & make it interesting.
           </p>
         </div>
-        <div class="translate-y-48">
-          <p class="font-bold text-[1rem]">Services</p>
+        <div class="translate-y-24">
+          <p class="font-bold text-[1rem] uppercase pb-4">Services</p>
           <ul class="grid gap-4">
             <li class="bg-white rounded-full p-2">Product Design</li>
             <li class="bg-white rounded-full p-2">Design System</li>
             <li class="bg-white rounded-full p-2">Webdesign</li>
             <li class="bg-white rounded-full p-2">App Design</li>
           </ul>
+          <p class="font-bold text-[1rem] uppercase pb-4 pt-4">Industries</p>
+          <ul class="grid gap-4">
+            <li class="bg-white rounded-full p-2">Product Design</li>
+            <li class="bg-white rounded-full p-2">Design System</li>
+          </ul>
+          <p class="font-bold text-[1rem] uppercase pb-4 pt-4">Technologies</p>
+          <ul class="grid gap-4">
+            <li class="bg-white rounded-full p-2">Product Design</li>
+            <li class="bg-white rounded-full p-2">Design System</li>
+          </ul>
         </div>
       </div>
       <div id="container">
-        <div class="pt-40 px-32 text-black flex gap-[4rem]">
+        <div class="pt-8 px-32 text-black flex gap-[4rem]">
           <div class="testimage">
             <img src="../assets/ps.jpg" alt="1" />
           </div>
@@ -89,9 +99,8 @@ export default {
         scrub: 1,
         pin: '#container',
         pinSpacer: false,
-        markers: true,
         start: 'bottom bottom',
-        end: () => innerHeight * 10,
+        end: '+=9000',
       },
     })
 
@@ -186,6 +195,8 @@ export default {
     gsap.to('.testimage', {
       scrollTrigger: {
         trigger: '.testimage',
+        start: 'top center',
+        markers: true,
         scrub: true,
       },
       clipPath: 'polygon(0 0, 60% 0, 60% 100%, 0 100%)',

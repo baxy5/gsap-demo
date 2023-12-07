@@ -78,8 +78,8 @@
           src="../assets/ps.jpg"
           alt=""
         />
-        <div class="desc-container">
-          <div class="absolute bg-[#D3DEE5] px-[1.5rem] ml:px-[4rem] pt-8">
+        <div class="desc-container relative">
+          <div class="absolute top-0 px-[1.5rem] ml:px-[4rem] pt-8">
             <div class="desc1">
               <h2 class="text-[#FF4A31] text-[1rem] font-[800] uppercase">
                 key challenge to solve
@@ -92,7 +92,7 @@
               </p>
             </div>
           </div>
-          <div class="w-full px-[1.5rem] ml:px-[4rem] pt-8">
+          <div class="absolute top-0 w-full px-[1.5rem] ml:px-[4rem] pt-8">
             <div class="desc2">
               <h2 class="text-[#FF4A31] text-[1rem] font-[800] uppercase">
                 our process
@@ -105,11 +105,50 @@
               </ul>
             </div>
           </div>
+          <div class="absolute top-0 w-full px-[1.5rem] ml:px-[4rem] pt-8">
+            <div class="desc3">
+              <h2 class="text-[#FF4A31] text-[1rem] font-[800] uppercase">
+                result
+              </h2>
+              <p class="text-[1.375rem] font-[800] pt-4">
+                We have developed a mobile competence center that supports agile
+                delivery and decreases time to market, resulting in a fast and
+                easily scalable mobile application.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="cards-container">
+          <div
+            class="relative flex flex-col justify-center items-center text-center pt-8"
+          >
+            <div
+              class="box1 absolute top-0 text-[#001826] p-[3rem] bg-white rounded-[2rem] w-[19rem] flex items-center justify-center flex-col"
+            >
+              <p class="text-[3.5rem] font-[500] pb-[1.5rem]">4,4</p>
+              <p class="text-[1.125rem] font-[600]">Based on 23 000</p>
+              <p class="text-[1.125rem] font-[600]">Appstore review</p>
+            </div>
+            <div
+              class="box2 absolute top-0 text-[#001826] p-[3rem] bg-white rounded-[2rem] w-[19rem] flex items-center justify-center flex-col"
+            >
+              <p class="text-[3.5rem] font-[500] pb-[1.5rem]">4,4</p>
+              <p class="text-[1.125rem] font-[600]">Based on 23 000</p>
+              <p class="text-[1.125rem] font-[600]">Appstore review</p>
+            </div>
+            <div
+              class="box3 absolute top-0 text-[#001826] p-[3rem] bg-white rounded-[2rem] w-[19rem] flex items-center justify-center flex-col"
+            >
+              <p class="text-[3.5rem] font-[500] pb-[1.5rem]">4,4</p>
+              <p class="text-[1.125rem] font-[600]">Based on 23 000</p>
+              <p class="text-[1.125rem] font-[600]">Appstore review</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section
+    <!-- <section
       class="section2 h-[100vh] text-[#0D283F] bg-[#D3DEE5] px-[1.5rem] pt-16"
     >
       <div id="second-container" class="relative">
@@ -147,7 +186,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section class="h-[100vh]">asd</section>
 
@@ -193,7 +232,7 @@ export default {
       scrollTrigger: {
         trigger: '.section1',
         start: 'top top+=60px',
-        end: '+=2500',
+        end: '+=5500',
         pin: '.section1',
         scrub: 1,
         fastScrollEnd: true, // vegen gyorsabban eltünik
@@ -201,15 +240,17 @@ export default {
     })
 
     imageDetailsSection
-      .set('.desc1', {
-        opacity: 0,
-      })
-      .set('.desc2', {
+      .set(['.desc1', '.desc2', '.desc3'], {
         opacity: 0,
         y: 100,
       })
+      .set(['.box1', '.box2', '.box3'], {
+        opacity: 0,
+        y: 200,
+      })
       .to('.desc1', {
         opacity: 4,
+        y: 0,
       })
       .to('.desc1', {
         opacity: 0,
@@ -218,11 +259,45 @@ export default {
         opacity: 4,
         y: 0,
       })
-      .to('.section1', {
+      .to('.desc2', {
         opacity: 0,
-        y: -100,
+      })
+      .to('.desc3', {
+        opacity: 4,
+        y: 0,
+      })
+      .to('.img', {
+        opacity: 0,
+      })
+      .to(
+        '.desc3',
+        {
+          y: -250,
+        },
+        '<'
+      )
+      .to('.box1', {
+        opacity: 4,
+        y: 30,
+      })
+      .to('.box1', {
+        opacity: 0.6,
+        scale: 0.6,
+      })
+      .to('.box2', {
+        opacity: 4,
+        y: 80,
+      })
+      .to('.box2', {
+        opacity: 0.8,
+        scale: 0.8,
+      })
+      .to('.box3', {
+        opacity: 4,
+        y: 130,
       })
 
+    /*
     let cardsAnimation = gsap.timeline({
       scrollTrigger: {
         trigger: '.section2',
@@ -277,7 +352,7 @@ export default {
           y: -380,
         },
         '<'
-      )
+      ) */
   },
 }
 </script>
