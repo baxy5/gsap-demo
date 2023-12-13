@@ -1,5 +1,5 @@
 <template>
-  <main class="bg-[#D3DEE5] px-[12.13rem] text-[#0D283F]">
+  <main id="main-container" class="bg-[#D3DEE5] px-[12.13rem] text-[#0D283F]">
     <div class="hero-text">
       <div class="flex justify-between px-52 pt-52">
         <div id="intro" class="w-[500px] text-[#0D283F]">
@@ -74,9 +74,57 @@
             </div>
           </div>
         </div>
+        <div class="absolute w-full top-[25%] flex justify-between">
+          <div id="box-text" class="w-[34rem]">
+            <h2 class="text-[#FF4A31] uppercase text-[1rem] font-extrabold">
+              Result
+            </h2>
+            <p class="text-[#0D283F] text-[1.75rem] font-bold">
+              We have developed a mobile competence center that supports agile
+              delivery and decreases time to market, resulting in a fast and
+              easily scalable mobile application.
+            </p>
+          </div>
+          <div
+            id="box1"
+            class="absolute top-[90%] right-[25%] bg-white p-16 rounded-[2rem] text-center"
+          >
+            <div>
+              <h2 class="text-[3.75rem] font-medium">XX</h2>
+              <p class="text-[1.125rem] font-semibold">
+                Based on 23 000 <br />
+                Appstore review
+              </p>
+            </div>
+          </div>
+          <div
+            id="box2"
+            class="absolute top-[90%] right-[25%] bg-white p-16 rounded-[2rem] text-center"
+          >
+            <div>
+              <h2 class="text-[3.75rem] font-medium">20%</h2>
+              <p class="text-[1.125rem] font-semibold">
+                Based on 23 000 <br />
+                Appstore review
+              </p>
+            </div>
+          </div>
+          <div
+            id="box3"
+            class="absolute top-[90%] right-[25%] bg-white p-16 rounded-[2rem] text-center"
+          >
+            <div>
+              <h2 class="text-[3.75rem] font-medium">4,4</h2>
+              <p class="text-[1.125rem] font-semibold">
+                Based on 23 000 <br />
+                Appstore review
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="h-[100vh]"></div>
+    <div class="h-[100vh]">next section</div>
   </main>
 </template>
 <script>
@@ -120,7 +168,7 @@ export default {
       scrollTrigger: {
         trigger: '#image-container',
         start: 'top top+=60',
-        end: '+=3000',
+        end: '+=7500',
         scrub: 1,
         pin: '#image-container',
       },
@@ -128,6 +176,14 @@ export default {
 
     imageOnTextAnim
       .set(['#parag1', '#parag2'], {
+        opacity: 0,
+        y: 250,
+      })
+      .set(['#box-text', '#box1'], {
+        opacity: 0,
+        y: 250,
+      })
+      .set(['#box2', '#box3'], {
         opacity: 0,
         y: 250,
       })
@@ -153,8 +209,69 @@ export default {
       )
       .to('#parag2', {
         opacity: 0,
-        y: -250,
+        y: -25,
+        x: 25,
+        duration: 0.5,
       })
+      .to(
+        '.anim-img',
+        {
+          transform: 'scale(1) translate(20%, 0%)',
+          clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
+          duration: 1,
+        },
+        '<'
+      )
+      .to(
+        '#main-container',
+        {
+          backgroundColor: '#0D283F',
+        },
+        '<'
+      )
+      .to('#main-container', {
+        backgroundColor: '#D3DEE5',
+      })
+      .to(
+        '.anim-img',
+        {
+          opacity: 0,
+          y: '-100%',
+        },
+        '<'
+      )
+      .to(
+        ['#box-text', '#box1'],
+        {
+          opacity: 4,
+          y: 0,
+        },
+        '<'
+      )
+      .to('#box1', {
+        opacity: 0.6,
+        scale: 0.6,
+      })
+      .to(
+        '#box2',
+        {
+          opacity: 4,
+          y: 60,
+        },
+        '<'
+      )
+      .to('#box2', {
+        opacity: 0.8,
+        scale: 0.8,
+      })
+      .to(
+        '#box3',
+        {
+          opacity: 4,
+          y: 120,
+        },
+        '<'
+      )
   },
 }
 </script>
