@@ -16,7 +16,11 @@
       >
         We love to wow2
       </p>
-      <p class="absolute text-black text-[6rem] appic z-50 mt-96">Appic</p>
+      <p
+        class="appic absolute text-black text-[6rem] z-50 mt-96 font-extrabold"
+      >
+        appic
+      </p>
       <svg
         class="svg h-full w-full z-40"
         width="1794"
@@ -66,7 +70,7 @@ export default {
           pinSpacer: false, // ez a kettö amugy fölösleges szerintem ide mert semmit nem csinálnak kb
           pinSpacig: false, // ez is megrohadhat
           start: 'top top',
-          end: '+=7400',
+          end: '+=10500',
           fastScrollEnd: true,
         },
       })
@@ -76,7 +80,7 @@ export default {
         scrollTrigger: {
           trigger: '#text1',
           start: 'top top',
-          end: '+=2500px',
+          end: '+=3500px',
           scrub: 1,
           fastScrollEnd: true,
         },
@@ -88,12 +92,20 @@ export default {
           opacity: 0,
         })
         .to('#text1', {
+          scale: 1,
+          duration: 1,
+        })
+        .to('#text1', {
           scale: 0,
           opacity: 0,
         })
         .from('#text2', {
           scale: 4,
           opacity: 0,
+        })
+        .to('#text2', {
+          scale: 1,
+          duration: 1,
         })
         .to('#text2', {
           scale: 0,
@@ -103,6 +115,7 @@ export default {
       appicLogoAnimation
         .set('.appic', {
           opacity: 0,
+          y: 70,
         })
         .set('.svg', {
           scale: 8,
@@ -110,7 +123,7 @@ export default {
         .to('.svg', {
           scale: 0.3,
           onUpdate: () => {
-            if (gsap.getProperty('.svg', 'scale') <= 1.8) {
+            if (gsap.getProperty('.svg', 'scale') <= 1.4) {
               gsap.to(
                 '#path',
                 {
@@ -131,6 +144,7 @@ export default {
         })
         .to('.appic', {
           opacity: 4,
+          y: 0,
           display: 'block',
         })
     })

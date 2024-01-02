@@ -211,7 +211,6 @@ export default {
         opacity: 0,
         y: -25,
         x: 25,
-        duration: 0.5,
       })
       .to(
         '.anim-img',
