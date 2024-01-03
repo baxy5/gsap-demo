@@ -148,46 +148,6 @@
       </div>
     </section>
 
-    <!-- <section
-      class="section2 h-[100vh] text-[#0D283F] bg-[#D3DEE5] px-[1.5rem] pt-16"
-    >
-      <div id="second-container" class="relative">
-        <div class="desc3">
-          <h2 class="text-[#FF4A31] text-[1rem] font-[800] uppercase">
-            result
-          </h2>
-          <p class="text-[1.375rem] font-[800] pt-4">
-            We have developed a mobile competence center that supports agile
-            delivery and decreases time to market, resulting in a fast and
-            easily scalable mobile application.
-          </p>
-        </div>
-        <div class="flex flex-col justify-center items-center text-center pt-8">
-          <div
-            class="box1 text-[#001826] p-[3rem] bg-white rounded-[2rem] w-[19rem] flex items-center justify-center flex-col"
-          >
-            <p class="text-[3.5rem] font-[500] pb-[1.5rem]">4,4</p>
-            <p class="text-[1.125rem] font-[600]">Based on 23 000</p>
-            <p class="text-[1.125rem] font-[600]">Appstore review</p>
-          </div>
-          <div
-            class="box2 text-[#001826] p-[3rem] bg-white rounded-[2rem] w-[19rem] flex items-center justify-center flex-col"
-          >
-            <p class="text-[3.5rem] font-[500] pb-[1.5rem]">4,4</p>
-            <p class="text-[1.125rem] font-[600]">Based on 23 000</p>
-            <p class="text-[1.125rem] font-[600]">Appstore review</p>
-          </div>
-          <div
-            class="box3 text-[#001826] p-[3rem] bg-white rounded-[2rem] w-[19rem] flex items-center justify-center flex-col"
-          >
-            <p class="text-[3.5rem] font-[500] pb-[1.5rem]">4,4</p>
-            <p class="text-[1.125rem] font-[600]">Based on 23 000</p>
-            <p class="text-[1.125rem] font-[600]">Appstore review</p>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
     <section class="h-[100vh]">asd</section>
 
     <!-- <section class="h-[100vh]">
@@ -267,7 +227,7 @@ export default {
         y: 0,
       })
       .to('.img', {
-        opacity: 0,
+        y: '-100%',
       })
       .to(
         '.desc3',
@@ -283,6 +243,7 @@ export default {
       .to('.box1', {
         opacity: 0.6,
         scale: 0.6,
+        color: 'transparent',
       })
       .to('.box2', {
         opacity: 4,
@@ -291,74 +252,14 @@ export default {
       .to('.box2', {
         opacity: 0.8,
         scale: 0.8,
+        color: 'transparent',
       })
       .to('.box3', {
         opacity: 4,
         y: 130,
       })
-
-    /*
-    let cardsAnimation = gsap.timeline({
-      scrollTrigger: {
-        trigger: '.section2',
-        start: 'top top+=60px',
-        end: '+=2500',
-        pin: '.section2',
-        scrub: 1,
-        fastScrollEnd: true, // vegen gyorsabban eltünik
-      },
-    })
-
-    cardsAnimation
-      .set(['.box2', '.box3'], {
-        opacity: 0,
-      })
-      .from(
-        '.desc3',
-        {
-          opacity: 0,
-          y: 100,
-        },
-        '<'
-      )
-      .from(
-        '.box1',
-        {
-          opacity: 0,
-          y: 100,
-        },
-        0.3
-      )
-      .to('.box1', {
-        opacity: 0.6,
-        scale: 0.6,
-      })
-      .to(
-        '.box2',
-        {
-          opacity: 4,
-          y: -190,
-        },
-        '<'
-      )
-      .to('.box2', {
-        opacity: 0.8,
-        scale: 0.8,
-      })
-      .to(
-        '.box3',
-        {
-          opacity: 4,
-          y: -380,
-        },
-        '<'
-      ) */
   },
 }
 </script>
 
-<style>
-/* .pin-spacer {
-  background-color: #d3dee5;
-} */
-</style>
+<style></style>

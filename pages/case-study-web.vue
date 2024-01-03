@@ -250,6 +250,7 @@ export default {
       .to('#box1', {
         opacity: 0.6,
         scale: 0.6,
+        color: 'transparent',
       })
       .to(
         '#box2',
@@ -262,6 +263,7 @@ export default {
       .to('#box2', {
         opacity: 0.8,
         scale: 0.8,
+        color: 'transparent',
       })
       .to(
         '#box3',
