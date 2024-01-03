@@ -115,7 +115,7 @@ export default {
       appicLogoAnimation
         .set('.appic', {
           opacity: 0,
-          y: 70,
+          y: 40,
         })
         .set('.svg', {
           scale: 8,
