@@ -71,7 +71,7 @@ export default {
         scrollTrigger: {
           trigger: '#text1',
           start: 'top top',
-          end: '+=3500px',
+          end: '+=4000px',
           scrub: 1,
           fastScrollEnd: true,
         },
@@ -96,7 +96,7 @@ export default {
             scale: 4,
             opacity: 0,
           },
-          "-=0.2"
+          '-=0.3'
         )
         .to('#text2', {
           scale: 1,
@@ -116,6 +116,20 @@ export default {
           scale: 90,
         })
         .to('.svg', {
+          scale: 12.5,
+        })
+        .to('#wow-container', {
+          background:
+            'conic-gradient(from -90deg at 50.84% 49.95%, #5BFFB0 95.75302720069885deg, #2279C9 179.20027256011963deg, #6CCBF4 284.6290683746338deg), #D9D9D9',
+        })
+        .to(
+          '.svg',
+          {
+            scale: 3,
+          },
+          '<'
+        )
+        /* .to('.svg', {
           scale: 3,
           onUpdate: () => {
             if (gsap.getProperty('.svg', 'scale') <= 12.5) {
@@ -137,7 +151,7 @@ export default {
               )
             }
           },
-        })
+        }) */
         .to('.appic', {
           opacity: 4,
           y: 0,
