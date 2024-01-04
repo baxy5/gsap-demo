@@ -21,6 +21,11 @@
       >
         appic
       </p>
+      <img
+        id="gradient-bg"
+        src="../assets/appic-logo-gradientbg.jpg"
+        class="absolute top-0 left-0 h-full w-full"
+      />
       <svg
         class="svg h-full w-full z-40"
         width="32768"
@@ -108,6 +113,9 @@ export default {
         })
 
       appicLogoAnimation
+        .set('#gradient-bg', {
+          opacity: 0,
+        })
         .set('.appic', {
           opacity: 0,
           y: 40,
@@ -118,11 +126,8 @@ export default {
         .to('.svg', {
           scale: 12.5,
         })
-        .to('#wow-container', {
-          background:
-            'conic-gradient(from -90deg at 50.84% 49.95%, #5BFFB0 95.75302720069885deg, #2279C9 179.20027256011963deg, #6CCBF4 284.6290683746338deg), #D9D9D9',
-          /* background:
-            'radial-gradient(circle, rgba(91,255,176,1) 0%, rgba(34,121,201,1) 50%, rgba(108,203,244,1) 100%)', */
+        .to('#gradient-bg', {
+          opacity: 4,
         })
         .to(
           '.svg',
@@ -131,29 +136,6 @@ export default {
           },
           '<'
         )
-        /* .to('.svg', {
-          scale: 3,
-          onUpdate: () => {
-            if (gsap.getProperty('.svg', 'scale') <= 12.5) {
-              gsap.to(
-                '#wow-container',
-                {
-                  background:
-                    'conic-gradient(from -90deg at 50.84% 49.95%, #5BFFB0 95.75302720069885deg, #2279C9 179.20027256011963deg, #6CCBF4 284.6290683746338deg), #D9D9D9',
-                },
-                '<'
-              )
-            } else {
-              gsap.to(
-                '#wow-container',
-                {
-                  background: '#001323',
-                },
-                '<'
-              )
-            }
-          },
-        }) */
         .to('.appic', {
           opacity: 4,
           y: 0,
@@ -216,6 +198,9 @@ export default {
         })
 
       appicLogoAnimation
+        .set('#gradient-bg', {
+          opacity: 0,
+        })
         .set('.appic', {
           opacity: 0,
           y: 40,
@@ -226,11 +211,8 @@ export default {
         .to('.svg', {
           scale: 12.5,
         })
-        .to('#wow-container', {
-          background:
-            'conic-gradient(from -90deg at 50.84% 49.95%, #5BFFB0 95.75302720069885deg, #2279C9 179.20027256011963deg, #6CCBF4 284.6290683746338deg), #D9D9D9',
-          /* background:
-            'radial-gradient(circle, rgba(91,255,176,1) 0%, rgba(34,121,201,1) 50%, rgba(108,203,244,1) 100%)', */
+        .to('#gradient-bg', {
+          opacity: 4,
         })
         .to(
           '.svg',
@@ -239,28 +221,6 @@ export default {
           },
           '<'
         )
-        /* .to('.svg', {
-          scale: 0.3,
-          onUpdate: () => {
-            if (gsap.getProperty('.svg', 'scale') <= 1.8) {
-              gsap.to(
-                '#path',
-                {
-                  fill: 'url(#gradient)',
-                },
-                '<'
-              )
-            } else {
-              gsap.to(
-                '#path',
-                {
-                  fill: '#001323',
-                },
-                '<'
-              )
-            }
-          },
-        }) */
         .to('.appic', {
           opacity: 4,
           display: 'block',
