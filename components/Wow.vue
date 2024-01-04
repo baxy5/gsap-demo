@@ -121,6 +121,8 @@ export default {
         .to('#wow-container', {
           background:
             'conic-gradient(from -90deg at 50.84% 49.95%, #5BFFB0 95.75302720069885deg, #2279C9 179.20027256011963deg, #6CCBF4 284.6290683746338deg), #D9D9D9',
+          /* background:
+            'radial-gradient(circle, rgba(91,255,176,1) 0%, rgba(34,121,201,1) 50%, rgba(108,203,244,1) 100%)', */
         })
         .to(
           '.svg',
