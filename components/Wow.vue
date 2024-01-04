@@ -171,7 +171,7 @@ export default {
           pinSpacer: false, // ez a kettö amugy fölösleges szerintem ide mert semmit nem csinálnak kb
           pinSpacig: false, // ez is megrohadhat
           start: 'top top',
-          end: '+=4400',
+          end: '+=5400',
         },
       })
 
@@ -180,7 +180,7 @@ export default {
         scrollTrigger: {
           trigger: '#text1',
           start: 'top top',
-          end: '+=1200px',
+          end: '+=2200px',
           scrub: 1,
         },
       })
@@ -191,12 +191,24 @@ export default {
           opacity: 0,
         })
         .to('#text1', {
+          scale: 1,
+          duration: 1,
+        })
+        .to('#text1', {
           scale: 0,
           opacity: 0,
         })
-        .from('#text2', {
-          scale: 4,
-          opacity: 0,
+        .from(
+          '#text2',
+          {
+            scale: 4,
+            opacity: 0,
+          },
+          '-=0.3'
+        )
+        .to('#text2', {
+          scale: 1,
+          duration: 1,
         })
         .to('#text2', {
           scale: 0,
@@ -206,11 +218,28 @@ export default {
       appicLogoAnimation
         .set('.appic', {
           opacity: 0,
+          y: 40,
         })
         .set('.svg', {
-          scale: 8,
+          scale: 90,
         })
         .to('.svg', {
+          scale: 12.5,
+        })
+        .to('#wow-container', {
+          background:
+            'conic-gradient(from -90deg at 50.84% 49.95%, #5BFFB0 95.75302720069885deg, #2279C9 179.20027256011963deg, #6CCBF4 284.6290683746338deg), #D9D9D9',
+          /* background:
+            'radial-gradient(circle, rgba(91,255,176,1) 0%, rgba(34,121,201,1) 50%, rgba(108,203,244,1) 100%)', */
+        })
+        .to(
+          '.svg',
+          {
+            scale: 5,
+          },
+          '<'
+        )
+        /* .to('.svg', {
           scale: 0.3,
           onUpdate: () => {
             if (gsap.getProperty('.svg', 'scale') <= 1.8) {
@@ -231,7 +260,7 @@ export default {
               )
             }
           },
-        })
+        }) */
         .to('.appic', {
           opacity: 4,
           display: 'block',

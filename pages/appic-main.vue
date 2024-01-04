@@ -2,9 +2,6 @@
   <main class="overflow-hidden bg-[#001323]">
     <Logo />
     <ContainerSec />
-    <!-- <Container container="scale-container" child="scale" />
-    <Container container="scale-container2" child="scale2" />
-    <Container container="scale-container3" child="scale3" /> -->
     <Hero />
     <Wow />
     <section class="h-[100vh]"><p class="text-white">asd</p></section>
